@@ -1,0 +1,8 @@
+feature math
+
+    before
+        system "l math.q";
+
+    should return the absolute value of the given input
+        expect the absolute value of the given input
+            .qu.compare[1; .math.abs -1]

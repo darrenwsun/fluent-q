@@ -1,0 +1,13 @@
+site_name: Fluent-Q Documentation
+use_directory_urls: false
+markdown_extensions:
+    - toc:
+        permalink: true
+        baselevel: 1
+        toc_depth: 3
+theme:
+  name: material
+nav:
+  - Overview:
+    - Introduction: index.md
+  - math: math.md
