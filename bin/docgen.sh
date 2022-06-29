@@ -6,7 +6,7 @@ cd "$(dirname $0)"/..
 mkdir tempdocs
 
 echo generating docs
-q $AXLIBRARIES_HOME/ws/qdoc.q_ -src src -out tempdocs -render -sitename "Fluent-Q Documentation"
+q $AXLIBRARIES_HOME/ws/qdoc.q_ -src src -out tempdocs -map overview:fileoverview -render -sitename "Fluent-Q Documentation"
 
 cd tempdocs/doc
 mkdocs build --theme material
