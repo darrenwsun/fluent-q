@@ -1,11 +1,17 @@
 #!/bin/bash -e
 
-echo clean up docs directory
-rm -rf docs/*
+# assume this script is one level down the project directory
+cd "$(dirname "$0"/..)"
+
+mkdir tempdocs
 
 echo generating docs
-q $AXLIBRARIES_HOME/ws/qdoc.q_ -src src -out docs -render -config resources/mkdocs.yml
+q $AXLIBRARIES_HOME/ws/qdoc.q_ -src src -out tempdocs -render -sitename "Fluent-Q Documentation"
 
-echo restructure docs directory
-mv docs/doc docs/reference
-rm -rf docs/md
+cd tempdocs/doc
+mkdocs build --theme material
+
+cd ../..
+rm -rf docs/*
+mv tempdocs/doc/site/* docs
+rm -rf tempdocs
