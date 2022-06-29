@@ -292,6 +292,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathavgstrict" class="md-nav__link">
+    .math.avgStrict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathceiling" class="md-nav__link">
+    .math.ceiling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathcos" class="md-nav__link">
     .math.cos
   </a>
@@ -387,6 +401,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathavgstrict" class="md-nav__link">
+    .math.avgStrict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathceiling" class="md-nav__link">
+    .math.ceiling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathcos" class="md-nav__link">
     .math.cos
   </a>
@@ -431,7 +459,7 @@
   <h1>math</h1>
 
 <h2 id="mathabs">.math.abs<a class="headerlink" href="#mathabs" title="Permanent link">&para;</a></h2>
-<p>Returns absolute value of x.</p>
+<p>Returns absolute value of x. This function is atomic.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -465,7 +493,7 @@
 </tbody>
 </table>
 <h2 id="mathacos">.math.acos<a class="headerlink" href="#mathacos" title="Permanent link">&para;</a></h2>
-<p>Returns the arccosine of x.</p>
+<p>Returns the arccosine of x. This function is atomic.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -499,7 +527,7 @@
 </tbody>
 </table>
 <h2 id="mathasin">.math.asin<a class="headerlink" href="#mathasin" title="Permanent link">&para;</a></h2>
-<p>Returns the arcsine of x.</p>
+<p>Returns the arcsine of x. This function is atomic.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -533,7 +561,7 @@
 </tbody>
 </table>
 <h2 id="mathatan">.math.atan<a class="headerlink" href="#mathatan" title="Permanent link">&para;</a></h2>
-<p>Returns the arctangent of x.</p>
+<p>Returns the arctangent of x. This function is atomic.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -600,8 +628,77 @@
 </tr>
 </tbody>
 </table>
+<h2 id="mathavgstrict">.math.avgStrict<a class="headerlink" href="#mathavgstrict" title="Permanent link">&para;</a></h2>
+<p>Returns the arithmetic mean of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>*</td>
+<td>Arbitrarily nested numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>Arithmetic mean of x. Almost identical to .math.avg except that null-ignoring behavior is consistent  regardless of how nested a list is.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="math.html#mathavg"> .math.avg </a></p>
+<h2 id="mathceiling">.math.ceiling<a class="headerlink" href="#mathceiling" title="Permanent link">&para;</a></h2>
+<p>Returns the least integer greater than or equal to x. This function is atomic.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>least integer greater than or equal to x.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="mathcos">.math.cos<a class="headerlink" href="#mathcos" title="Permanent link">&para;</a></h2>
-<p>Returns the cosine of x.</p>
+<p>Returns the cosine of x. This function is atomic.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -669,7 +766,7 @@
 </tbody>
 </table>
 <h2 id="mathsin">.math.sin<a class="headerlink" href="#mathsin" title="Permanent link">&para;</a></h2>
-<p>Returns the sine of x.</p>
+<p>Returns the sine of x. This function is atomic.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -703,7 +800,7 @@
 </tbody>
 </table>
 <h2 id="mathtan">.math.tan<a class="headerlink" href="#mathtan" title="Permanent link">&para;</a></h2>
-<p>Returns the tangent of x.</p>
+<p>Returns the tangent of x. This function is atomic.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>

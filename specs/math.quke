@@ -1,8 +1,11 @@
-feature math
+feature Support mathematical calculations
 
     before
         system "l math.q";
 
-    should return the absolute value of the given input
-        expect the absolute value of the given input
-            .qu.compare[1; .math.abs -1]
+    should return the arithmetic mean of the argument
+        expect the arithmetic mean of a 1-level nested list ignoring null
+            .qu.compare[1 3f; .math.avgStrict (1 2; 0N 4)]
+
+        expect the arithmetic mean of a 2-level nested list ignoring null
+            .qu.compare[(1f;1 2f); .math.avgStrict ((1;1 1);(0N;0N 3))]

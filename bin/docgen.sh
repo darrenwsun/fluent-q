@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # assume this script is one level down the project directory
-cd "$(dirname "$0"/..)"
+cd "$(dirname $0)"/..
 
 mkdir tempdocs
 
