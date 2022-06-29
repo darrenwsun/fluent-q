@@ -306,8 +306,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathcorrelation" class="md-nav__link">
+    .math.correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathcos" class="md-nav__link">
     .math.cos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathcovariance" class="md-nav__link">
+    .math.covariance
   </a>
   
 </li>
@@ -415,8 +429,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathcorrelation" class="md-nav__link">
+    .math.correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathcos" class="md-nav__link">
     .math.cos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathcovariance" class="md-nav__link">
+    .math.covariance
   </a>
   
 </li>
@@ -521,8 +549,8 @@
 </thead>
 <tbody>
 <tr>
-<td>number</td>
-<td>Arccosine of x, in radians. The result is between 0 and π. Null is returned  if the argument is not between -1 and 1.</td>
+<td>float</td>
+<td>Arccosine of x, in radians. Null is returned if x is not between -1 and 1.</td>
 </tr>
 </tbody>
 </table>
@@ -555,8 +583,8 @@
 </thead>
 <tbody>
 <tr>
-<td>number</td>
-<td>Arcsine of x, in radians. The result is between -π/2 and π/2. Null is returned  if the argument is not between -1 and 1.</td>
+<td>float</td>
+<td>Arcsine of x, in radians. Null is returned if x is not between -1 and 1.</td>
 </tr>
 </tbody>
 </table>
@@ -589,8 +617,8 @@
 </thead>
 <tbody>
 <tr>
-<td>number</td>
-<td>Arctangent of x, in radians. The result is between -π/2 and π/2.</td>
+<td>float</td>
+<td>Arctangent of x, in radians.</td>
 </tr>
 </tbody>
 </table>
@@ -657,7 +685,7 @@
 </thead>
 <tbody>
 <tr>
-<td>float</td>
+<td>*</td>
 <td>Arithmetic mean of x. Almost identical to .math.avg except that null-ignoring behavior is consistent  regardless of how nested a list is.</td>
 </tr>
 </tbody>
@@ -692,8 +720,47 @@
 </thead>
 <tbody>
 <tr>
-<td>float</td>
+<td>long</td>
 <td>least integer greater than or equal to x.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathcorrelation">.math.correlation<a class="headerlink" href="#mathcorrelation" title="Permanent link">&para;</a></h2>
+<p>Returns correlation of two lists</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>First numeric list.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>number[]</td>
+<td>Second numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>Correlation of x and y. The result is between -1 and 1.</td>
 </tr>
 </tbody>
 </table>
@@ -726,8 +793,47 @@
 </thead>
 <tbody>
 <tr>
-<td>number</td>
-<td>Cosine of x. The result is between -1 and 1, or null if the argument is null or infinity.</td>
+<td>float</td>
+<td>Cosine of x. The result is null if x is null or infinity.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathcovariance">.math.covariance<a class="headerlink" href="#mathcovariance" title="Permanent link">&para;</a></h2>
+<p>Returns covariance of two lists</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>First numeric list.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>number[]</td>
+<td>Second numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>Covariance of x and y.</td>
 </tr>
 </tbody>
 </table>
@@ -760,7 +866,7 @@
 </thead>
 <tbody>
 <tr>
-<td>float</td>
+<td>float[]</td>
 <td>Running averages of x. It applies function .math.avg to successive prefixes of x.</td>
 </tr>
 </tbody>
@@ -794,8 +900,8 @@
 </thead>
 <tbody>
 <tr>
-<td>number</td>
-<td>Sine of x. The result is between -1 and 1, or null if the argument is null or infinity.</td>
+<td>float</td>
+<td>Sine of x. The result is null if x is null or infinity.</td>
 </tr>
 </tbody>
 </table>
@@ -828,8 +934,8 @@
 </thead>
 <tbody>
 <tr>
-<td>number</td>
-<td>Tangent of x. The result is null if the argument is null or infinity.</td>
+<td>float</td>
+<td>Tangent of x. The result is null if x is null or infinity.</td>
 </tr>
 </tbody>
 </table>
