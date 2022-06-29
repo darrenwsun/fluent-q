@@ -341,6 +341,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathmovingstdev" class="md-nav__link">
+    .math.movingStdev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathrunningavg" class="md-nav__link">
     .math.runningAvg
   </a>
@@ -355,8 +362,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathstdev" class="md-nav__link">
+    .math.stdev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathtan" class="md-nav__link">
     .math.tan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathunbiasedstdev" class="md-nav__link">
+    .math.unbiasedStdev
   </a>
   
 </li>
@@ -478,6 +499,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathmovingstdev" class="md-nav__link">
+    .math.movingStdev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathrunningavg" class="md-nav__link">
     .math.runningAvg
   </a>
@@ -492,8 +520,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathstdev" class="md-nav__link">
+    .math.stdev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathtan" class="md-nav__link">
     .math.tan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathunbiasedstdev" class="md-nav__link">
+    .math.unbiasedStdev
   </a>
   
 </li>
@@ -704,7 +746,7 @@ See <a href="https://code.kx.com/q/ref/avg/#avg"><code>avg</code></a>.</p>
 <tbody>
 <tr>
 <td>x</td>
-<td>*</td>
+<td>*[]</td>
 <td>Arbitrarily nested numeric list.</td>
 </tr>
 </tbody>
@@ -947,6 +989,46 @@ See <a href="https://code.kx.com/q/ref/deltas/"><code>deltas</code></a>.</p>
 </tbody>
 </table>
 <p><strong>See Also:</strong> <a href="math.html#mathdiff"> .math.diff </a></p>
+<h2 id="mathmovingstdev">.math.movingStdev<a class="headerlink" href="#mathmovingstdev" title="Permanent link">&para;</a></h2>
+<p>Returns x-item moving standard deviation of y.
+See <a href="https://code.kx.com/q/ref/dev/#mdev"><code>mdev</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>short | int | long</td>
+<td>Number of items in the calculation scope.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number[]</td>
+<td>x-item moving standard deviation of y. The first x-1 elements of the results use only the first  x-1 elements of y, respectively.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="mathrunningavg">.math.runningAvg<a class="headerlink" href="#mathrunningavg" title="Permanent link">&para;</a></h2>
 <p>Returns the running averages of x.
 See <a href="https://code.kx.com/q/ref/avg/#avgs"><code>avgs</code></a>.</p>
@@ -1018,6 +1100,41 @@ See <a href="https://code.kx.com/q/ref/sin/"><code>sin</code></a>.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="mathstdev">.math.stdev<a class="headerlink" href="#mathstdev" title="Permanent link">&para;</a></h2>
+<p>Returns standard deviation.
+See <a href="https://code.kx.com/q/ref/dev/#dev"><code>dev</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>Standard deviation of x.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="mathtan">.math.tan<a class="headerlink" href="#mathtan" title="Permanent link">&para;</a></h2>
 <p>Returns the tangent of x. This function is atomic.
 See <a href="https://code.kx.com/q/ref/tan/"><code>tan</code></a>.</p>
@@ -1053,6 +1170,42 @@ See <a href="https://code.kx.com/q/ref/tan/"><code>tan</code></a>.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="mathunbiasedstdev">.math.unbiasedStdev<a class="headerlink" href="#mathunbiasedstdev" title="Permanent link">&para;</a></h2>
+<p>Returns unbiased estimation of standard deviation.
+See <a href="https://code.kx.com/q/ref/dev/#sdev"><code>sdev</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>unbiased estimation of standard deviation of x.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="math.html#mathstdev"> .math.stdev </a></p>
 
               
             </article>

@@ -59,7 +59,7 @@
 
 // @kind function
 // @overview Returns the arithmetic mean of x.
-// @param x {*} Arbitrarily nested numeric list.
+// @param x {*[]} Arbitrarily nested numeric list.
 // @return {*} Arithmetic mean of x. Almost identical to .math.avg except that null-ignoring behavior is consistent
 // regardless of how nested a list is.
 // @see .math.avg
@@ -116,3 +116,28 @@
 .math.diff0:{[x]
   first[x]-':x
  };
+
+// @kind function
+// @overview Returns standard deviation.
+// See [`dev`](https://code.kx.com/q/ref/dev/#dev).
+// @param x {number[]} A numeric list.
+// @return {float} Standard deviation of x.
+// @see
+.math.stdev:dev;
+
+// @kind function
+// @overview Returns unbiased estimation of standard deviation.
+// See [`sdev`](https://code.kx.com/q/ref/dev/#sdev).
+// @param x {number[]} A numeric list.
+// @return {float} unbiased estimation of standard deviation of x.
+// @see .math.stdev
+.math.unbiasedStdev:sdev;
+
+// @kind function
+// @overview Returns x-item moving standard deviation of y.
+// See [`mdev`](https://code.kx.com/q/ref/dev/#mdev).
+// @param x {short | int | long} Number of items in the calculation scope.
+// @param y {number[]} A numeric list.
+// @return {number[]} x-item moving standard deviation of y. The first x-1 elements of the results use only the first
+/// x-1 elements of y, respectively.
+.math.movingStdev:mdev;
