@@ -263,6 +263,62 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mathacos" class="md-nav__link">
+    .math.acos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathasin" class="md-nav__link">
+    .math.asin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathatan" class="md-nav__link">
+    .math.atan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathavg" class="md-nav__link">
+    .math.avg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathcos" class="md-nav__link">
+    .math.cos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathrunningavg" class="md-nav__link">
+    .math.runningAvg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathsin" class="md-nav__link">
+    .math.sin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathtan" class="md-nav__link">
+    .math.tan
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -302,6 +358,62 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mathacos" class="md-nav__link">
+    .math.acos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathasin" class="md-nav__link">
+    .math.asin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathatan" class="md-nav__link">
+    .math.atan
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathavg" class="md-nav__link">
+    .math.avg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathcos" class="md-nav__link">
+    .math.cos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathrunningavg" class="md-nav__link">
+    .math.runningAvg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathsin" class="md-nav__link">
+    .math.sin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathtan" class="md-nav__link">
+    .math.tan
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -319,7 +431,7 @@
   <h1>math</h1>
 
 <h2 id="mathabs">.math.abs<a class="headerlink" href="#mathabs" title="Permanent link">&para;</a></h2>
-<p>Returns absolute value of the parameter.</p>
+<p>Returns absolute value of x.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -333,7 +445,7 @@
 <tr>
 <td>x</td>
 <td>number</td>
-<td>A number</td>
+<td>A number.</td>
 </tr>
 </tbody>
 </table>
@@ -348,7 +460,279 @@
 <tbody>
 <tr>
 <td>number</td>
-<td>Absolute value of the number</td>
+<td>Absolute value of x.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathacos">.math.acos<a class="headerlink" href="#mathacos" title="Permanent link">&para;</a></h2>
+<p>Returns the arccosine of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Arccosine of x, in radians. The result is between 0 and π. Null is returned  if the argument is not between -1 and 1.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathasin">.math.asin<a class="headerlink" href="#mathasin" title="Permanent link">&para;</a></h2>
+<p>Returns the arcsine of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Arcsine of x, in radians. The result is between -π/2 and π/2. Null is returned  if the argument is not between -1 and 1.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathatan">.math.atan<a class="headerlink" href="#mathatan" title="Permanent link">&para;</a></h2>
+<p>Returns the arctangent of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Arctangent of x, in radians. The result is between -π/2 and π/2.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathavg">.math.avg<a class="headerlink" href="#mathavg" title="Permanent link">&para;</a></h2>
+<p>Returns the arithmetic mean of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>Arithmetic mean of x. Null is returned if x is empty, or contains both positive and negative infinity.  Null items in x are ignored.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathcos">.math.cos<a class="headerlink" href="#mathcos" title="Permanent link">&para;</a></h2>
+<p>Returns the cosine of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number in radians.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Cosine of x. The result is between -1 and 1, or null if the argument is null or infinity.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathrunningavg">.math.runningAvg<a class="headerlink" href="#mathrunningavg" title="Permanent link">&para;</a></h2>
+<p>Returns the running averages of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>Running averages of x. It applies function .math.avg to successive prefixes of x.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathsin">.math.sin<a class="headerlink" href="#mathsin" title="Permanent link">&para;</a></h2>
+<p>Returns the sine of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number in radians</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Sine of x. The result is between -1 and 1, or null if the argument is null or infinity.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathtan">.math.tan<a class="headerlink" href="#mathtan" title="Permanent link">&para;</a></h2>
+<p>Returns the tangent of x.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number in radians.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Tangent of x. The result is null if the argument is null or infinity.</td>
 </tr>
 </tbody>
 </table>
