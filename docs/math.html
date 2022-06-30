@@ -341,6 +341,55 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathdiv" class="md-nav__link">
+    .math.div
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathema" class="md-nav__link">
+    .math.ema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathexp" class="md-nav__link">
+    .math.exp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathfloor" class="md-nav__link">
+    .math.floor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathinv" class="md-nav__link">
+    .math.inv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathlsq" class="md-nav__link">
+    .math.lsq
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathmatmul" class="md-nav__link">
+    .math.matmul
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathmovingstdev" class="md-nav__link">
     .math.movingStdev
   </a>
@@ -378,6 +427,13 @@
         <li class="md-nav__item">
   <a href="#mathunbiasedstdev" class="md-nav__link">
     .math.unbiasedStdev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathxexp" class="md-nav__link">
+    .math.xexp
   </a>
   
 </li>
@@ -499,6 +555,55 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathdiv" class="md-nav__link">
+    .math.div
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathema" class="md-nav__link">
+    .math.ema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathexp" class="md-nav__link">
+    .math.exp
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathfloor" class="md-nav__link">
+    .math.floor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathinv" class="md-nav__link">
+    .math.inv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathlsq" class="md-nav__link">
+    .math.lsq
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathmatmul" class="md-nav__link">
+    .math.matmul
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathmovingstdev" class="md-nav__link">
     .math.movingStdev
   </a>
@@ -536,6 +641,13 @@
         <li class="md-nav__item">
   <a href="#mathunbiasedstdev" class="md-nav__link">
     .math.unbiasedStdev
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathxexp" class="md-nav__link">
+    .math.xexp
   </a>
   
 </li>
@@ -768,7 +880,7 @@ See <a href="https://code.kx.com/q/ref/avg/#avg"><code>avg</code></a>.</p>
 </table>
 <p><strong>See Also:</strong> <a href="math.html#mathavg"> .math.avg </a></p>
 <h2 id="mathceiling">.math.ceiling<a class="headerlink" href="#mathceiling" title="Permanent link">&para;</a></h2>
-<p>Returns the least integer greater than or equal to x. This function is atomic.
+<p>Round up. This function is atomic.
 See <a href="https://code.kx.com/q/ref/ceiling/"><code>ceiling</code></a>.</p>
 <p><strong>Parameter:</strong></p>
 <table>
@@ -989,6 +1101,271 @@ See <a href="https://code.kx.com/q/ref/deltas/"><code>deltas</code></a>.</p>
 </tbody>
 </table>
 <p><strong>See Also:</strong> <a href="math.html#mathdiff"> .math.diff </a></p>
+<h2 id="mathdiv">.math.div<a class="headerlink" href="#mathdiv" title="Permanent link">&para;</a></h2>
+<p>Integer division. This function is atomic.
+See <a href="https://code.kx.com/q/ref/div/"><code>div</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>Dividend.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>number</td>
+<td>Divisor.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number[]</td>
+<td>The greatest whole number that does not exceed x%y.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathema">.math.ema<a class="headerlink" href="#mathema" title="Permanent link">&para;</a></h2>
+<p>Exponential moving average.
+See <a href="https://code.kx.com/q/ref/ema/"><code>ema</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number | number[]</td>
+<td>A number or numeric list of the same length as y.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float[]</td>
+<td>Exponential moving average of y, with x as the smoothing parameter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathexp">.math.exp<a class="headerlink" href="#mathexp" title="Permanent link">&para;</a></h2>
+<p>Raise e to a power. This function is atomic.
+See <a href="https://code.kx.com/q/ref/exp/#exp"><code>exp</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>Exponent.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>The base of natural logarithms to the power of x, or null if x is null.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathfloor">.math.floor<a class="headerlink" href="#mathfloor" title="Permanent link">&para;</a></h2>
+<p>Round down. This function is atomic.
+See <a href="https://code.kx.com/q/ref/floor/"><code>floor</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long</td>
+<td>greatest integer less than or equal to x.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathinv">.math.inv<a class="headerlink" href="#mathinv" title="Permanent link">&para;</a></h2>
+<p>Matrix inverse.
+See <a href="https://code.kx.com/q/ref/inv"><code>inv</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>float[][]</td>
+<td>A matrix.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float[][]</td>
+<td>Inverse of non-singular float matrix x</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathlsq">.math.lsq<a class="headerlink" href="#mathlsq" title="Permanent link">&para;</a></h2>
+<p>Least squares, approximately matrix division.
+See <a href="https://code.kx.com/q/ref/lsq"><code>lsq</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>float[][]</td>
+<td>A matrix with the same number of columns as y.</td>
+</tr>
+<tr>
+<td>b</td>
+<td>float[][]</td>
+<td>A matrix whose number of rows do not exceed the number of columns, and  whose rows are linearly independent.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float[][]</td>
+<td>Least-squares solution to a linear matrix equation <code>a=x mul b</code> where <code>mul</code> is matrix multiplication.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathmatmul">.math.matmul<a class="headerlink" href="#mathmatmul" title="Permanent link">&para;</a></h2>
+<p>Matrix multiplication, or dot product.
+See <a href="https://code.kx.com/q/ref/mmu"><code>mmu</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>float[] | float[][]</td>
+<td>A float vector or matrix.</td>
+</tr>
+<tr>
+<td>y</td>
+<td>float[] | float[][]</td>
+<td>Another float vector or matrix, where the number of elements in y must match  the number of elements in x if x is a vector, or the number of columns of x if x is a matrix.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float | float[]</td>
+<td>Matrix product or dot product of x and y.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="mathmovingstdev">.math.movingStdev<a class="headerlink" href="#mathmovingstdev" title="Permanent link">&para;</a></h2>
 <p>Returns x-item moving standard deviation of y.
 See <a href="https://code.kx.com/q/ref/dev/#mdev"><code>mdev</code></a>.</p>
@@ -1206,6 +1583,46 @@ See <a href="https://code.kx.com/q/ref/dev/#sdev"><code>sdev</code></a>.</p>
 </tbody>
 </table>
 <p><strong>See Also:</strong> <a href="math.html#mathstdev"> .math.stdev </a></p>
+<h2 id="mathxexp">.math.xexp<a class="headerlink" href="#mathxexp" title="Permanent link">&para;</a></h2>
+<p>Raise x to a power. This function is atomic.
+See <a href="https://code.kx.com/q/ref/exp/#xexp"><code>xexp</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>base</td>
+<td>number</td>
+<td>Base.</td>
+</tr>
+<tr>
+<td>exponent</td>
+<td>number</td>
+<td>Exponent.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>The base of natural logarithms to the power of x, or null if x is null or  the operation isn't valid, e.g. <code>-1 xexp .5</code>.</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>

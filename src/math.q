@@ -76,11 +76,18 @@
 .math.runningAvg:avgs;
 
 // @kind function
-// @overview Returns the least integer greater than or equal to x. This function is atomic.
+// @overview Round up. This function is atomic.
 // See [`ceiling`](https://code.kx.com/q/ref/ceiling/).
 // @param x {number} A number.
 // @return {long} least integer greater than or equal to x.
 .math.ceiling:ceiling;
+
+// @kind function
+// @overview Round down. This function is atomic.
+// See [`floor`](https://code.kx.com/q/ref/floor/).
+// @param x {number} A number.
+// @return {long} greatest integer less than or equal to x.
+.math.floor:floor;
 
 // @kind function
 // @overview Returns correlation of two lists.
@@ -141,3 +148,61 @@
 // @return {number[]} x-item moving standard deviation of y. The first x-1 elements of the results use only the first
 /// x-1 elements of y, respectively.
 .math.movingStdev:mdev;
+
+// @kind function
+// @overview Integer division. This function is atomic.
+// See [`div`](https://code.kx.com/q/ref/div/).
+// @param x {number} Dividend.
+// @param y {number} Divisor.
+// @return {number[]} The greatest whole number that does not exceed x%y.
+.math.div:div;
+
+// @kind function
+// @overview Exponential moving average.
+// See [`ema`](https://code.kx.com/q/ref/ema/).
+// @param x {number | number[]} A number or numeric list of the same length as y.
+// @param y {number[]} A numeric list.
+// @return {float[]} Exponential moving average of y, with x as the smoothing parameter.
+.math.ema:ema;
+
+// @kind function
+// @overview Raise e to a power. This function is atomic.
+// See [`exp`](https://code.kx.com/q/ref/exp/#exp).
+// @param x {number} Exponent.
+// @return {float} The base of natural logarithms to the power of x, or null if x is null.
+.math.exp:exp;
+
+// @kind function
+// @overview Raise x to a power. This function is atomic.
+// See [`xexp`](https://code.kx.com/q/ref/exp/#xexp).
+// @param base {number} Base.
+// @param exponent {number} Exponent.
+// @return {float} The base of natural logarithms to the power of x, or null if x is null or
+// the operation isn't valid, e.g. `-1 xexp .5`.
+.math.xexp:{[base;exponent] base xexp exponent};
+
+// @kind function
+// @overview Matrix inverse.
+// See [`inv`](https://code.kx.com/q/ref/inv).
+// @param x {float[][]} A matrix.
+// @return {float[][]} Inverse of non-singular float matrix x
+.math.inv:inv;
+
+// @kind function
+// @overview Least squares, approximately matrix division.
+// See [`lsq`](https://code.kx.com/q/ref/lsq).
+// @param a {float[][]} A matrix with the same number of columns as y.
+// @param b {float[][]} A matrix whose number of rows do not exceed the number of columns, and
+// whose rows are linearly independent.
+// @return {float[][]} Least-squares solution to a linear matrix equation `a=x mul b` where `mul` is matrix multiplication.
+.math.lsq:{[a;b] a lsq b};
+
+// @kind function
+// @overview Matrix multiplication, or dot product.
+// See [`mmu`](https://code.kx.com/q/ref/mmu).
+// @param x {float[] | float[][]} A float vector or matrix.
+// @param y {float[] | float[][]} Another float vector or matrix, where the number of elements in y must match
+// the number of elements in x if x is a vector, or the number of columns of x if x is a matrix.
+// @return {float | float[]} Matrix product or dot product of x and y.
+.math.matmul:mmu;
+
