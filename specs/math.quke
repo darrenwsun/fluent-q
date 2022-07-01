@@ -16,3 +16,10 @@ feature Support mathematical calculations
 
         expect the minimum of a 2-level nested list ignoring null
             .qu.compare[(1;1 1); .math.minStrict ((1;1 1);(0N;0N 3))]
+
+    should return the product of the argument, ignoring null consistently
+        expect the product of a 1-level nested list ignoring null
+            .qu.compare[1 8; .math.prdStrict (1 2; 0N 4)]
+
+        expect the product of a 2-level nested list ignoring null
+            .qu.compare[(1;1 3); .math.prdStrict ((1;1 1);(0N;0N 3))]

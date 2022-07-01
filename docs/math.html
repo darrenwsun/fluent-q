@@ -467,6 +467,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathneg" class="md-nav__link">
+    .math.neg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathprd" class="md-nav__link">
+    .math.prd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathprdstrict" class="md-nav__link">
+    .math.prdStrict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathrunningavg" class="md-nav__link">
     .math.runningAvg
   </a>
@@ -483,6 +504,13 @@
         <li class="md-nav__item">
   <a href="#mathrunningmin" class="md-nav__link">
     .math.runningMin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathrunningprd" class="md-nav__link">
+    .math.runningPrd
   </a>
   
 </li>
@@ -807,6 +835,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathneg" class="md-nav__link">
+    .math.neg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathprd" class="md-nav__link">
+    .math.prd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathprdstrict" class="md-nav__link">
+    .math.prdStrict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathrunningavg" class="md-nav__link">
     .math.runningAvg
   </a>
@@ -823,6 +872,13 @@
         <li class="md-nav__item">
   <a href="#mathrunningmin" class="md-nav__link">
     .math.runningMin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathrunningprd" class="md-nav__link">
+    .math.runningPrd
   </a>
   
 </li>
@@ -1097,7 +1153,7 @@ See <a href="https://code.kx.com/q/ref/avg/#avg"><code>avg</code></a>.</p>
 </table>
 <p><strong>See Also:</strong> <a href="math.html#mathavgstrict"> .math.avgStrict </a> <a href="math.html#mathmovingavg"> .math.movingAvg </a> <a href="math.html#mathrunningavg"> .math.runningAvg </a> <a href="math.html#mathweightedavg"> .math.weightedAvg </a></p>
 <h2 id="mathavgstrict">.math.avgStrict<a class="headerlink" href="#mathavgstrict" title="Permanent link">&para;</a></h2>
-<p>Arithmetic mean, consistently ignoring nulls.</p>
+<p>Arithmetic mean, strictly ignoring nulls.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -1389,7 +1445,7 @@ See <a href="https://code.kx.com/q/ref/div/"><code>div</code></a>.</p>
 <tbody>
 <tr>
 <td>number[]</td>
-<td>The greatest whole number that does not exceed x%y.</td>
+<td>The greatest whole number that does not exceed <code>x%y</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1794,7 +1850,7 @@ See <a href="https://code.kx.com/q/ref/min/#min"><code>min</code></a>.</p>
 <tbody>
 <tr>
 <td>number</td>
-<td>Minimum of items in x. Almost identical to .math.min except that null-ignoring behavior is  consistent regardless of how nested a list is.</td>
+<td>Minimum of items in x. Almost identical to <code>.math.min</code> except that null-ignoring behavior is  consistent regardless of how nested a list is.</td>
 </tr>
 </tbody>
 </table>
@@ -2043,6 +2099,112 @@ See <a href="https://code.kx.com/q/ref/sum/#msum"><code>msum</code></a>.</p>
 </tbody>
 </table>
 <p><strong>See Also:</strong> <a href="math.html#mathrunningsum"> .math.runningSum </a> <a href="math.html#mathsum"> .math.sum </a> <a href="math.html#mathweightedsum"> .math.weightedSum </a></p>
+<h2 id="mathneg">.math.neg<a class="headerlink" href="#mathneg" title="Permanent link">&para;</a></h2>
+<p>Negate. This function is atomic.
+See <a href="https://code.kx.com/q/ref/neg/"><code>neg</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>bool | number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Negation of x.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mathprd">.math.prd<a class="headerlink" href="#mathprd" title="Permanent link">&para;</a></h2>
+<p>Product.
+See <a href="https://code.kx.com/q/ref/prd/#prd"><code>prd</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Product of x. Nulls are treated as 1.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="math.html#mathprdstrict"> .math.prdStrict </a> <a href="math.html#mathrunningprd"> .math.runningPrd </a></p>
+<h2 id="mathprdstrict">.math.prdStrict<a class="headerlink" href="#mathprdstrict" title="Permanent link">&para;</a></h2>
+<p>Product, strictly ignoring nulls.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>*[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>Product of x. Almost identical to <code>.math.prd</code> except that null-ignoring behavior is  consistent regardless of how nested a list is.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="math.html#mathprd"> .math.prd </a></p>
 <h2 id="mathrunningavg">.math.runningAvg<a class="headerlink" href="#mathrunningavg" title="Permanent link">&para;</a></h2>
 <p>Running averages.
 See <a href="https://code.kx.com/q/ref/avg/#avgs"><code>avgs</code></a>.</p>
@@ -2151,6 +2313,42 @@ See <a href="https://code.kx.com/q/ref/min/#mins"><code>mins</code></a>.</p>
 </tbody>
 </table>
 <p><strong>See Also:</strong> <a href="math.html#mathmin"> .math.min </a> <a href="math.html#mathmovingmin"> .math.movingMin </a> <a href="math.html#mathrunningmax"> .math.runningMax </a></p>
+<h2 id="mathrunningprd">.math.runningPrd<a class="headerlink" href="#mathrunningprd" title="Permanent link">&para;</a></h2>
+<p>Products.
+See <a href="https://code.kx.com/q/ref/prd/#prds"><code>prds</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>number[]</td>
+<td>A numeric list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>Running products of x. It applies function <code>.math.prd</code> to successive prefixes of x.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="math.html#mathprd"> .math.prd </a></p>
 <h2 id="mathrunningsum">.math.runningSum<a class="headerlink" href="#mathrunningsum" title="Permanent link">&para;</a></h2>
 <p>Running sums.
 See <a href="https://code.kx.com/q/ref/sum/#sums"><code>sums</code></a>.</p>

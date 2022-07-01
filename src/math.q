@@ -6,6 +6,13 @@
 .math.abs:abs;
 
 // @kind function
+// @overview Negate. This function is atomic.
+// See [`neg`](https://code.kx.com/q/ref/neg/).
+// @param x {bool | number} A number.
+// @return {number} Negation of x.
+.math.neg:neg;
+
+// @kind function
 // @overview Returns the cosine of x. This function is atomic.
 // See [`cos`](https://code.kx.com/q/ref/cos/).
 // @param x {number} A number in radians.
@@ -60,7 +67,7 @@
 .math.avg:avg;
 
 // @kind function
-// @overview Arithmetic mean, consistently ignoring nulls.
+// @overview Arithmetic mean, strictly ignoring nulls.
 // @param x {*[]} Arbitrarily nested numeric list.
 // @return {*} Arithmetic mean of x. Almost identical to `.math.avg` except that null-ignoring behavior is consistent
 // regardless of how nested a list is.
@@ -238,11 +245,38 @@
 .math.movingStdev:mdev;
 
 // @kind function
+// @overview Product.
+// See [`prd`](https://code.kx.com/q/ref/prd/#prd).
+// @param x {number[]} A numeric list.
+// @return {number} Product of x. Nulls are treated as 1.
+// @see .math.prdStrict
+// @see .math.runningPrd
+.math.prd:prd;
+
+// @kind function
+// @overview Product, strictly ignoring nulls.
+// @param x {*[]} A numeric list.
+// @return {*} Product of x. Almost identical to `.math.prd` except that null-ignoring behavior is
+/// consistent regardless of how nested a list is.
+// @see .math.prd
+.math.prdStrict:{[x]
+  $[0>type first x; prd x; .math.prdStrict each flip x]
+ };
+
+// @kind function
+// @overview Products.
+// See [`prds`](https://code.kx.com/q/ref/prd/#prds).
+// @param x {number[]} A numeric list.
+// @return {number} Running products of x. It applies function `.math.prd` to successive prefixes of x.
+// @see .math.prd
+.math.runningPrd:prds;
+
+// @kind function
 // @overview Integer division. This function is atomic.
 // See [`div`](https://code.kx.com/q/ref/div/).
 // @param x {number} Dividend.
 // @param y {number} Divisor.
-// @return {number[]} The greatest whole number that does not exceed x%y.
+// @return {number[]} The greatest whole number that does not exceed `x%y`.
 .math.div:div;
 
 // @kind function
@@ -341,7 +375,7 @@
 // @kind function
 // @overview Minimum, strictly ignoring null.
 // @param x {number[]} A numeric list.
-// @return {number} Minimum of items in x. Almost identical to .math.min except that null-ignoring behavior is
+// @return {number} Minimum of items in x. Almost identical to `.math.min` except that null-ignoring behavior is
 // consistent regardless of how nested a list is.
 // @see .math.min
 .math.minStrict:{[x]
