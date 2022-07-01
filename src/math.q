@@ -48,7 +48,7 @@
 .math.atan:atan;
 
 // @kind function
-// @overview Returns the arithmetic mean of x.
+// @overview Arithmetic mean.
 // See [`avg`](https://code.kx.com/q/ref/avg/#avg).
 // @param x {number[]} A numeric list.
 // @return {float} Arithmetic mean of x. Null is returned if x is empty, or contains both positive and negative infinity.
@@ -60,9 +60,9 @@
 .math.avg:avg;
 
 // @kind function
-// @overview Returns the arithmetic mean of x.
+// @overview Arithmetic mean, consistently ignoring nulls.
 // @param x {*[]} Arbitrarily nested numeric list.
-// @return {*} Arithmetic mean of x. Almost identical to .math.avg except that null-ignoring behavior is consistent
+// @return {*} Arithmetic mean of x. Almost identical to `.math.avg` except that null-ignoring behavior is consistent
 // regardless of how nested a list is.
 // @see .math.avg
 .math.avgStrict:{[x]
@@ -70,7 +70,7 @@
  };
 
 // @kind function
-// @overview Returns the running averages of x.
+// @overview Running averages.
 // See [`avgs`](https://code.kx.com/q/ref/avg/#avgs).
 // @param x {number[]} A numeric list.
 // @return {float[]} Running averages of x. It applies function `.math.avg` to successive prefixes of x.
@@ -101,6 +101,67 @@
 // @see .math.runningAvg
 // @see .math.movingAvg
 .math.weightedAvg:wavg;
+
+// @kind function
+// @overview Total.
+// See [`sum`](https://code.kx.com/q/ref/sum/#sum).
+// @param x {number[]} A numeric list.
+// @return {number} Total of x. Null items in x are treated as zeros.
+// @see .math.sumStrict
+// @see .math.runningSum
+// @see .math.movingSum
+// @see .math.weightedSum
+.math.sum:sum;
+
+// @kind function
+// @overview Total, consistently ignoring nulls.
+// @param x {*[]} Arbitrarily nested numeric list.
+// @return {*} Total of x. Almost identical to `.math.sum` except that null-ignoring behavior is consistent
+// regardless of how nested a list is.
+// @see .math.sum
+.math.sumStrict:{[x]
+  $[0>type first x; sum x; .math.sumStrict each flip x]
+ };
+
+// @kind function
+// @overview Running sums.
+// See [`sums`](https://code.kx.com/q/ref/sum/#sums).
+// @param x {number[]} A numeric list.
+// @return {number} Running sums of x. It applies function `.math.sum` to successive prefixes of x.
+// @see .math.sum
+// @see .math.movingSum
+// @see .math.weightedSum
+.math.runningSum:sums;
+
+// @kind function
+// @overview Moving sums.
+// See [`msum`](https://code.kx.com/q/ref/sum/#msum).
+// @param x {short | int | long} A positive finite integer.
+// @param y {number[]} A numeric list.
+// @return {number} x-item moving sums of y. The first x-1 elements of the results use only the first
+/// x-1 elements of y, respectively.
+// @see .math.sum
+// @see .math.runningSum
+// @see .math.weightedSum
+.math.movingSum:msum;
+
+// @kind function
+// @overview Weighted sum.
+// See [`wsum`](https://code.kx.com/q/ref/sum/#wsum).
+// @param x {number[]} A numeric list representing weights.
+// @param y {number[]} A numeric list representing values.
+// @return {float} Sum of y weighted by x.
+// @see .math.sum
+// @see .math.runningSum
+// @see .math.movingSum
+.math.weightedSum:wsum;
+
+// @kind function
+// @overview Median.
+// See [`med`](https://code.kx.com/q/ref/med/).
+// @param x {number[]} A numeric list.
+// @return {float} Median of x.
+.math.median:med;
 
 // @kind function
 // @overview Round up. This function is atomic.
@@ -183,6 +244,14 @@
 // @param y {number} Divisor.
 // @return {number[]} The greatest whole number that does not exceed x%y.
 .math.div:div;
+
+// @kind function
+// @overview Modulus. This function is atomic.
+// See [`mod`](https://code.kx.com/q/ref/mod/).
+// @param x {number} Dividend.
+// @param y {number} Divisor.
+// @return {number} The remainder of `x%y`.
+.math.mod:mod;
 
 // @kind function
 // @overview Exponential moving average.
@@ -325,7 +394,7 @@
 // @kind function
 // @overview Moving maximums.
 // See [`mmax`](https://code.kx.com/q/ref/max/#mmax).
-// @param x {number[]} A positive finite integer.
+// @param x {number} A positive finite integer.
 // @param y {number[]} A numeric list.
 // @return {number} x-item moving maximums of y. The first x-1 elements of the results use only the first
 /// x-1 elements of y, respectively.
@@ -333,3 +402,4 @@
 // @see .math.runningMax
 // @see .math.movingMin
 .math.movingMax:mmax;
+
