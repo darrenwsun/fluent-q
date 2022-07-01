@@ -55,6 +55,8 @@
 // Null items in x are ignored.
 // @see .math.avgStrict
 // @see .math.runningAvg
+// @see .math.movingAvg
+// @see .math.weightedAvg
 .math.avg:avg;
 
 // @kind function
@@ -71,9 +73,34 @@
 // @overview Returns the running averages of x.
 // See [`avgs`](https://code.kx.com/q/ref/avg/#avgs).
 // @param x {number[]} A numeric list.
-// @return {float[]} Running averages of x. It applies function .math.avg to successive prefixes of x.
+// @return {float[]} Running averages of x. It applies function `.math.avg` to successive prefixes of x.
 // @see .math.avg
+// @see .math.movingAvg
+// @see .math.weightedAvg
 .math.runningAvg:avgs;
+
+// @kind function
+// @overview Moving averages.
+// See [`mavg`](https://code.kx.com/q/ref/avg/#mavg).
+// @param x {short | int | long} A positive finite integer.
+// @param y {number[]} A numeric list.
+// @return {float} x-item moving average of y. The first x-1 elements of the results use only the first
+// x-1 elements of y, respectively.
+// @see .math.avg
+// @see .math.runningAvg
+// @see .math.weightedAvg
+.math.movingAvg:mavg;
+
+// @kind function
+// @overview Weighted average.
+// See [`wavg`](https://code.kx.com/q/ref/avg/#wavg).
+// @param x {number[]} A numeric list representing weights.
+// @param y {number[]} A numeric list representing values.
+// @return {float} Average of y weighted by x.
+// @see .math.avg
+// @see .math.runningAvg
+// @see .math.movingAvg
+.math.weightedAvg:wavg;
 
 // @kind function
 // @overview Round up. This function is atomic.
@@ -170,6 +197,8 @@
 // See [`exp`](https://code.kx.com/q/ref/exp/#exp).
 // @param x {number} Exponent.
 // @return {float} The base of natural logarithms to the power of x, or null if x is null.
+// @see .math.xexp
+// @see .math.log
 .math.exp:exp;
 
 // @kind function
@@ -179,7 +208,28 @@
 // @param exponent {number} Exponent.
 // @return {float} The base of natural logarithms to the power of x, or null if x is null or
 // the operation isn't valid, e.g. `-1 xexp .5`.
+// @see .math.exp
+// @see .math.xlog
 .math.xexp:{[base;exponent] base xexp exponent};
+
+// @kind function
+// @overview Natural logarithm. This function is atomic.
+// See [`log`](https://code.kx.com/q/ref/log/#log).
+// @param x {number} A number.
+// @return {float} the natural logarithm of x, or null if x is null or less than zero, or negative infinity if x is zero.
+// @see .math.xlog
+// @see .math.exp
+.math.log:log;
+
+// @kind function
+// @overview Logarithm. This function is atomic.
+// See [`xlog`](https://code.kx.com/q/ref/log/#xlog).
+// @param x {number} Base.
+// @param y {number} Exponent.
+// @return {float} The base-x logarithm of y, or null if y is negative, or negative infinity if y is zero.
+// @see .math.log
+// @see .math.xexp
+.math.xlog:xlog;
 
 // @kind function
 // @overview Matrix inverse.
@@ -191,10 +241,11 @@
 // @kind function
 // @overview Least squares, approximately matrix division.
 // See [`lsq`](https://code.kx.com/q/ref/lsq).
-// @param a {float[][]} A matrix with the same number of columns as y.
+// @param a {float[][]} A matrix with the same number of columns as b.
 // @param b {float[][]} A matrix whose number of rows do not exceed the number of columns, and
 // whose rows are linearly independent.
 // @return {float[][]} Least-squares solution to a linear matrix equation `a=x mul b` where `mul` is matrix multiplication.
+// @see .math.matmul
 .math.lsq:{[a;b] a lsq b};
 
 // @kind function
@@ -204,5 +255,81 @@
 // @param y {float[] | float[][]} Another float vector or matrix, where the number of elements in y must match
 // the number of elements in x if x is a vector, or the number of columns of x if x is a matrix.
 // @return {float | float[]} Matrix product or dot product of x and y.
+// @see .math.lsq
 .math.matmul:mmu;
 
+// @kind function
+// @overview Minimum.
+// See [`min`](https://code.kx.com/q/ref/min/#min).
+// @param x {number[]} A numeric list.
+// @return {number} Minimum of items in x. Nulls are ignored, except that if the items of x are all nulls,
+// the result is infinity.
+// @see .math.runningMin
+// @see .math.movingMin
+// @see .math.max
+.math.min:min;
+
+// @kind function
+// @overview Minimum, strictly ignoring null.
+// @param x {number[]} A numeric list.
+// @return {number} Minimum of items in x. Almost identical to .math.min except that null-ignoring behavior is
+// consistent regardless of how nested a list is.
+// @see .math.min
+.math.minStrict:{[x]
+  $[0>type first x; min x; .math.minStrict each flip x]
+ };
+
+// @kind function
+// @overview Minimums.
+// See [`mins`](https://code.kx.com/q/ref/min/#mins).
+// @param x {number[]} A numeric list.
+// @return {number} Running minimum of x. It applies function `.math.min` to successive prefixes of x.
+// @see .math.min
+// @see .math.movingMin
+// @see .math.runningMax
+.math.runningMin:mins;
+
+// @kind function
+// @overview Moving minimums.
+// See [`mmin`](https://code.kx.com/q/ref/min/#mmin).
+// @param x {number[]} A positive finite integer.
+// @param y {number[]} A numeric list.
+// @return {number} x-item moving minimums of y. The first x-1 elements of the results use only the first
+/// x-1 elements of y, respectively.
+// @see .math.min
+// @see .math.runningMin
+// @see .math.movingMax
+.math.movingMin:mmin;
+
+// @kind function
+// @overview Maximum.
+// See [`max`](https://code.kx.com/q/ref/max/#max).
+// @param x {number[]} A numeric list.
+// @return {number} Maximum of items in x. Nulls are ignored, except that if the items of x are all nulls,
+// the result is negative infinity.
+// @see .math.runningMax
+// @see .math.movingMax
+// @see .math.min
+.math.max:max;
+
+// @kind function
+// @overview Maximums.
+// See [`maxs`](https://code.kx.com/q/ref/max/#maxs).
+// @param x {number[]} A numeric list.
+// @return {number} Running maximum of x. It applies function `.math.max` to successive prefixes of x.
+// @see .math.max
+// @see .math.movingMax
+// @see .math.runningMin
+.math.runningMax:maxs;
+
+// @kind function
+// @overview Moving maximums.
+// See [`mmax`](https://code.kx.com/q/ref/max/#mmax).
+// @param x {number[]} A positive finite integer.
+// @param y {number[]} A numeric list.
+// @return {number} x-item moving maximums of y. The first x-1 elements of the results use only the first
+/// x-1 elements of y, respectively.
+// @see .math.max
+// @see .math.runningMax
+// @see .math.movingMin
+.math.movingMax:mmax;
