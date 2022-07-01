@@ -8,9 +8,23 @@
 // @kind function
 // @overview Negate. This function is atomic.
 // See [`neg`](https://code.kx.com/q/ref/neg/).
-// @param x {bool | number} A number.
+// @param x {bool | number} A number or boolean value.
 // @return {number} Negation of x.
 .math.neg:neg;
+
+// @kind function
+// @overview Sign. This function is atomic.
+// See [`signum`](https://code.kx.com/q/ref/signum/).
+// @param x {bool | number} A number or boolean value.
+// @return {int} -1 if x is null or negative, 0 if x is zero, 1 if x is positive.
+.math.sign:signum;
+
+// @kind function
+// @overview Reciprocal. This function is atomic.
+// See [`reciprocal`](https://code.kx.com/q/ref/reciprocal/).
+// @param x {number} A number.
+// @return {float} Reciprocal of x.
+.math.reciprocal:reciprocal;
 
 // @kind function
 // @overview Returns the cosine of x. This function is atomic.
@@ -185,24 +199,45 @@
 .math.floor:floor;
 
 // @kind function
-// @overview Returns correlation of two lists.
+// @overview Variance.
+// See [`var`](https://code.kx.com/q/ref/var/#var).
+// @param x {number[]} A numeric list.
+// @return {float} Variance of x. Nulls are ignored.
+.math.variance:var;
+
+// @kind function
+// @overview Sample variance.
+// See [`svar`](https://code.kx.com/q/ref/cov/#svar).
+// @param x {number[]} A numeric list.
+// @return {float} Sample variance of x. Nulls are ignored.
+.math.sampleVariance:svar;
+
+// @kind function
+// @overview Correlation.
 // See [`cor`](https://code.kx.com/q/ref/cor/).
 // @param x {number[]} First numeric list.
-// @param y {number[]} Second numeric list.
+// @param y {number[]} Second numeric list conforming to x.
 // @return {float} Correlation of x and y. The result is between -1 and 1.
 .math.correlation:cor;
 
 // @kind function
-// @overview Returns covariance of two lists.
+// @overview Covariance.
 // See [`cov`](https://code.kx.com/q/ref/cov/#cov).
 // @param x {number[]} First numeric list.
-// @param y {number[]} Second numeric list.
+// @param y {number[]} Second numeric list conforming to x.
 // @return {float} Covariance of x and y.
 .math.covariance:cov;
 
 // @kind function
-// @overview Returns differences between consecutive items in x, with the first difference being the same as
-// the first element of x.
+// @overview Sample covariance.
+// See [`scov`](https://code.kx.com/q/ref/cov/#scov).
+// @param x {number[]} First numeric list.
+// @param y {number[]} Second numeric list conforming to x.
+// @return {float} Sample covariance of x and y.
+.math.sampleCovariance:scov;
+
+// @kind function
+// @overview Differences between consecutive items.
 // See [`deltas`](https://code.kx.com/q/ref/deltas/).
 // @param x {number[]} A numeric list.
 // @return {number[]} Differences between consecutive items in x, with the first difference being the same as
@@ -211,13 +246,29 @@
 .math.diff:deltas;
 
 // @kind function
-// @overview Returns differences between consecutive items in x, with the first difference being 0.
+// @overview Differences between consecutive items, with the first difference being 0.
 // @param x {number[]} A numeric list.
 // @return {number[]} Differences between consecutive items in x, with the first difference being 0.
 // @see .math.diff
 .math.diff0:{[x]
   first[x]-':x
  };
+
+// @kind function
+// @overview Ratios between consecutive items.
+// See [`ratios`](https://code.kx.com/q/ref/ratios/).
+// @param x {number[]} A numeric list.
+// @return {number[]} Ratios between consecutive items in x, with the first ratio being the same as
+// the first element of x.
+// @see .math.ratio0
+.math.ratio:ratios;
+
+// @kind function
+// @overview Ratios between consecutive items, with the first ratio being 1.
+// @param x {number[]} A numeric list.
+// @return {float[]} Ratios between consecutive items in x, with the first ratio being 1.0.
+// @see .math.ratio
+.math.ratio0:{[x] first[x]%':x };
 
 // @kind function
 // @overview Returns standard deviation.
@@ -335,6 +386,14 @@
 .math.xlog:xlog;
 
 // @kind function
+// @overview Square root. This function is atomic.
+// See [`sqrt`](https://code.kx.com/q/ref/sqrt/).
+// @param x {number} A number.
+// @return {float} The square root of x if x is non-negative and finite, null if x is negative or null, `0w` if x is real or float
+// infinity, or square root of the largest value for the datatype
+.math.sqrt:sqrt;
+
+// @kind function
 // @overview Matrix inverse.
 // See [`inv`](https://code.kx.com/q/ref/inv).
 // @param x {float[][]} A matrix.
@@ -436,4 +495,13 @@
 // @see .math.runningMax
 // @see .math.movingMin
 .math.movingMax:mmax;
+
+// @kind function
+// @overview Check bounds.
+// See [`within`](https://code.kx.com/q/ref/within/).
+// @param x {number | number[]} A number.
+// @param y {number[]} A pair of numbers of the same type as x if x is a number, or a flipped list of pairs of the same
+// count and type as x if x is a list.
+// @return {bool | bool[]} whether x is within the inclusive bounds given by y.
+.math.within:within;
 
