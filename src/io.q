@@ -172,19 +172,15 @@
 //
 // - See [`read0`](https://code.kx.com/q/ref/read0/#file-symbol).
 // @param file {symbol} A file symbol pointing to a file.
-// @return {string[]} Lines of the file as a list of strings. Lines are assumed delimited by either LF or CRLF,
-// and the delimiters are removed.
-.io.readTextFromFile:{[file] read0 file};
-
-// @kind function
-// @overview Read text of certain length from certain position.
-//
-// - See [`read0`](https://code.kx.com/q/ref/read0/#file-descriptor).
-// @param file {symbol} A file symbol pointing to a file.
-// @param pos {integer} Starting position to read.
-// @param len {integer} Length to read.
-// @return {string} Text of the given length from the given starting position.
-.io.readTextChunk:{[file;pos;len] read0 (file; pos; len)};
+// @param param {dict (pos:integer; len:integer)} Parameters: pos for starting position, len for length to read.
+// @return {string | string[]} Lines of the file as a list of strings if param is an empty dictionary,
+// or a string specified by the starting position and length.
+.io.readTextFromFile:{[file;param]
+  if[0=count param; : read0 file];
+  paramKeys:key param;
+  if[0<count extraKeys:paramKeys except `pos`len; ' "Unsupported keys: ","," sv string extraKeys];
+  $[`len in key param; read0 (file; 0^param`pos; param`len); read0 (file; param`pos)]
+ };
 
 // @kind function
 // @overview Read text from handle.
@@ -200,5 +196,29 @@
 // - See [`read0`](https://code.kx.com/q/ref/read0/#fifonamed-pipe).
 // @param handle {int} A handle to named pipe.
 // @param len {integer} Length to read.
-// @return {string} Text from the given handle.
+// @return {string} Text of the given length from the given handle.
 .io.readTextFromNamedPipe:{[handle;len] read0 (handle; len)};
+
+// @kind function
+// @overview Read bytes from file.
+//
+// - See [`read1`](https://code.kx.com/q/ref/read1/#file).
+// @param file {symbol} A file symbol pointing to a file.
+// @param param {dict (pos:integer; len:integer)} Parameters: pos for starting position, len for length to read.
+// @return {byte[]} All bytes from the file if param is an empty dictionary,
+// or those specified by the starting position and length.
+.io.readBytesFromFile:{[file;param]
+  if[0=count param; : read1 file];
+  paramKeys:key param;
+  if[0<count extraKeys:paramKeys except `pos`len; ' "Unsupported keys: ","," sv string extraKeys];
+  $[`len in key param; read1 (file; 0^param`pos; param`len); read1 (file; param`pos)]
+ };
+
+// @kind function
+// @overview Read bytes from named pipe.
+//
+// - See [`read1`](https://code.kx.com/q/ref/read1/#named-pipe).
+// @param handle {int} A handle to named pipe.
+// @param len {integer} Length to read.
+// @return {string} Bytes of the given length from the given handle.
+.io.readBytesFromNamedPipe:{[handle;len] read1 (handle; len)};

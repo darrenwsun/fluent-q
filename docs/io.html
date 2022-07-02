@@ -1,0 +1,1642 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>io - Fluent-Q Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ioclose" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Fluent-Q Documentation" class="md-header__button md-logo" aria-label="Fluent-Q Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fluent-Q Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              io
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Fluent-Q Documentation" class="md-nav__button md-logo" aria-label="Fluent-Q Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Fluent-Q Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dt.html" class="md-nav__link">
+        dt
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          io
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="io.html" class="md-nav__link md-nav__link--active">
+        io
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ioclose" class="md-nav__link">
+    .io.close
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iodelete" class="md-nav__link">
+    .io.delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iodeleteall" class="md-nav__link">
+    .io.deleteAll
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iogetsize" class="md-nav__link">
+    .io.getSize
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioisdir" class="md-nav__link">
+    .io.isDir
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioisfile" class="md-nav__link">
+    .io.isFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iolist" class="md-nav__link">
+    .io.list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iolistall" class="md-nav__link">
+    .io.listAll
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioloadobject" class="md-nav__link">
+    .io.loadObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioloadsplayedtable" class="md-nav__link">
+    .io.loadSplayedTable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioopen" class="md-nav__link">
+    .io.open
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadbytesfromfile" class="md-nav__link">
+    .io.readBytesFromFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadbytesfromnamedpipe" class="md-nav__link">
+    .io.readBytesFromNamedPipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadtextfromfile" class="md-nav__link">
+    .io.readTextFromFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadtextfromhandle" class="md-nav__link">
+    .io.readTextFromHandle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadtextfromnamedpipe" class="md-nav__link">
+    .io.readTextFromNamedPipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosaveobject" class="md-nav__link">
+    .io.saveObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosaveobjectcompressed" class="md-nav__link">
+    .io.saveObjectCompressed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosavetables" class="md-nav__link">
+    .io.saveTables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosplaytable" class="md-nav__link">
+    .io.splayTable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosplaytablecompressed" class="md-nav__link">
+    .io.splayTableCompressed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosplaytablecompressedperspec" class="md-nav__link">
+    .io.splayTableCompressedPerSpec
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        math
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="os.html" class="md-nav__link">
+        os
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rnd.html" class="md-nav__link">
+        rnd
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ioclose" class="md-nav__link">
+    .io.close
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iodelete" class="md-nav__link">
+    .io.delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iodeleteall" class="md-nav__link">
+    .io.deleteAll
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iogetsize" class="md-nav__link">
+    .io.getSize
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioisdir" class="md-nav__link">
+    .io.isDir
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioisfile" class="md-nav__link">
+    .io.isFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iolist" class="md-nav__link">
+    .io.list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iolistall" class="md-nav__link">
+    .io.listAll
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioloadobject" class="md-nav__link">
+    .io.loadObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioloadsplayedtable" class="md-nav__link">
+    .io.loadSplayedTable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioopen" class="md-nav__link">
+    .io.open
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadbytesfromfile" class="md-nav__link">
+    .io.readBytesFromFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadbytesfromnamedpipe" class="md-nav__link">
+    .io.readBytesFromNamedPipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadtextfromfile" class="md-nav__link">
+    .io.readTextFromFile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadtextfromhandle" class="md-nav__link">
+    .io.readTextFromHandle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioreadtextfromnamedpipe" class="md-nav__link">
+    .io.readTextFromNamedPipe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosaveobject" class="md-nav__link">
+    .io.saveObject
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosaveobjectcompressed" class="md-nav__link">
+    .io.saveObjectCompressed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosavetables" class="md-nav__link">
+    .io.saveTables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosplaytable" class="md-nav__link">
+    .io.splayTable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosplaytablecompressed" class="md-nav__link">
+    .io.splayTableCompressed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosplaytablecompressedperspec" class="md-nav__link">
+    .io.splayTableCompressedPerSpec
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>io</h1>
+
+<h2 id="ioclose">.io.close<a class="headerlink" href="#ioclose" title="Permanent link">&para;</a></h2>
+<p>Close file handle.
+See <a href="https://code.kx.com/q/ref/hopen/#hclose"><code>hclose</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>int</td>
+<td>A file handle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iodelete">.io.delete<a class="headerlink" href="#iodelete" title="Permanent link">&para;</a></h2>
+<p>Delete a file or directory if it's empty.
+See <a href="https://code.kx.com/q/ref/hdel/"><code>hdel</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol</td>
+<td>A file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>The file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#iodeleteall"> .io.deleteAll </a></p>
+<h2 id="iodeleteall">.io.deleteAll<a class="headerlink" href="#iodeleteall" title="Permanent link">&para;</a></h2>
+<p>Delete a file, or directory and its files and subdirectories recursively.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>symbol</td>
+<td>A file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>The file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#iodelete"> .io.delete </a></p>
+<h2 id="iogetsize">.io.getSize<a class="headerlink" href="#iogetsize" title="Permanent link">&para;</a></h2>
+<p>File size in bytes.
+See <a href="https://code.kx.com/q/ref/hcount/"><code>hcount</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol</td>
+<td>A file symbol pointing to a file.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long</td>
+<td>Size of the file. If the file is compressed, return the size of the original uncompressed file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioisdir">.io.isDir<a class="headerlink" href="#ioisdir" title="Permanent link">&para;</a></h2>
+<p>Check if the argument represents a directory and it exists.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>symbol</td>
+<td>A file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>1b if it exists and it's a directory, 0b otherwise.  see .io.isFile</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioisfile">.io.isFile<a class="headerlink" href="#ioisfile" title="Permanent link">&para;</a></h2>
+<p>Check if the argument represents a file and it exists.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>symbol</td>
+<td>A file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>1b if it exists and it's a file, 0b otherwise.  see .io.isDir</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iolist">.io.list<a class="headerlink" href="#iolist" title="Permanent link">&para;</a></h2>
+<p>List file/directory.
+See <a href="https://code.kx.com/q/ref/key/#files-in-a-folder"><code>key</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>symbol</td>
+<td>A file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol[] | list</td>
+<td>The file if the path points to a file;  items under the directory in ascending order, if the path points to a directory;  empty general list if the path doesn't exist.  see .io.listAll</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iolistall">.io.listAll<a class="headerlink" href="#iolistall" title="Permanent link">&para;</a></h2>
+<p>List file or directory recursively.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>symbol</td>
+<td>A file symbol.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol[] | list</td>
+<td>The file if the path points to a file;  the directory and items under it recursively in ascending order, if the path points to a directory;  empty general list if the path doesn't exist.  see .io.list</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioloadobject">.io.loadObject<a class="headerlink" href="#ioloadobject" title="Permanent link">&para;</a></h2>
+<p>Load a q object from disk. It can be memory mapped, or copied into memory, subject to its datatype and
+how it was saved initially.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/get/#get"><code>get</code></a>.</li>
+<li>See <a href="https://kx.com/blog/memory-mapping-in-kdb/">Memory mapping in kdb+</a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol</td>
+<td>A file.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>The q object represented by the file.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#iosaveobject"> .io.saveObject </a></p>
+<h2 id="ioloadsplayedtable">.io.loadSplayedTable<a class="headerlink" href="#ioloadsplayedtable" title="Permanent link">&para;</a></h2>
+<p>Load splayed table. The table is memory-mapped in deferred mode.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/get/#get"><code>get</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir</td>
+<td>symbol</td>
+<td>A directory.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>The splayed table.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#iosplaytable"> .io.splayTable </a></p>
+<h2 id="ioopen">.io.open<a class="headerlink" href="#ioopen" title="Permanent link">&para;</a></h2>
+<p>Open file.
+See <a href="https://code.kx.com/q/ref/hopen/#hopen"><code>hopen</code></a>.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol | string</td>
+<td>A file symbol or file path, pointing to a file.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>A connection handle to the file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioreadbytesfromfile">.io.readBytesFromFile<a class="headerlink" href="#ioreadbytesfromfile" title="Permanent link">&para;</a></h2>
+<p>Read bytes from file.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/read1/#file"><code>read1</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol</td>
+<td>A file symbol pointing to a file.</td>
+</tr>
+<tr>
+<td>param</td>
+<td>dict</td>
+<td>Parameters: pos for starting position, len for length to read.</td>
+</tr>
+<tr>
+<td>param.pos</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>param.len</td>
+<td>integer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte[]</td>
+<td>All bytes from the file if param is an empty dictionary,  or those specified by the starting position and length.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioreadbytesfromnamedpipe">.io.readBytesFromNamedPipe<a class="headerlink" href="#ioreadbytesfromnamedpipe" title="Permanent link">&para;</a></h2>
+<p>Read bytes from named pipe.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/read1/#named-pipe"><code>read1</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>int</td>
+<td>A handle to named pipe.</td>
+</tr>
+<tr>
+<td>len</td>
+<td>integer</td>
+<td>Length to read.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Bytes of the given length from the given handle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioreadtextfromfile">.io.readTextFromFile<a class="headerlink" href="#ioreadtextfromfile" title="Permanent link">&para;</a></h2>
+<p>Read text from file.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/read0/#file-symbol"><code>read0</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol</td>
+<td>A file symbol pointing to a file.</td>
+</tr>
+<tr>
+<td>param</td>
+<td>dict</td>
+<td>Parameters: pos for starting position, len for length to read.</td>
+</tr>
+<tr>
+<td>param.pos</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>param.len</td>
+<td>integer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string | string[]</td>
+<td>Lines of the file as a list of strings if param is an empty dictionary,  or a string specified by the starting position and length.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioreadtextfromhandle">.io.readTextFromHandle<a class="headerlink" href="#ioreadtextfromhandle" title="Permanent link">&para;</a></h2>
+<p>Read text from handle.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/read0/#system-or-process-handle"><code>read0</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>int</td>
+<td>A system/process handle.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Text from the given handle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ioreadtextfromnamedpipe">.io.readTextFromNamedPipe<a class="headerlink" href="#ioreadtextfromnamedpipe" title="Permanent link">&para;</a></h2>
+<p>Read text from named pipe.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/read0/#fifonamed-pipe"><code>read0</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>int</td>
+<td>A handle to named pipe.</td>
+</tr>
+<tr>
+<td>len</td>
+<td>integer</td>
+<td>Length to read.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Text of the given length from the given handle.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iosaveobject">.io.saveObject<a class="headerlink" href="#iosaveobject" title="Permanent link">&para;</a></h2>
+<p>Save a q object to disk.
+See <a href="https://code.kx.com/q/ref/get/#set"><code>set</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol</td>
+<td>A file.</td>
+</tr>
+<tr>
+<td>object</td>
+<td>*</td>
+<td>A q object to be saved.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>The file where the object is saved.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#ioloadobject"> .io.loadObject </a> <a href="io.html#iosaveobjectcompressed"> .io.saveObjectCompressed </a></p>
+<h2 id="iosaveobjectcompressed">.io.saveObjectCompressed<a class="headerlink" href="#iosaveobjectcompressed" title="Permanent link">&para;</a></h2>
+<p>Save a q object to disk, compressed.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/get/#set"><code>set</code></a>.</li>
+<li>See <a href="https://code.kx.com/q/kb/file-compression/#compression-parameters"><code>Compression parameters</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol</td>
+<td>A file.</td>
+</tr>
+<tr>
+<td>object</td>
+<td>*</td>
+<td>A q object to be saved.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>integer</td>
+<td>Logical block size.</td>
+</tr>
+<tr>
+<td>algo</td>
+<td>integer</td>
+<td>Compression algorithm.</td>
+</tr>
+<tr>
+<td>level</td>
+<td>integer</td>
+<td>Compression level.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>The file where the object is saved.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#iosaveobject"> .io.saveObject </a></p>
+<h2 id="iosavetables">.io.saveTables<a class="headerlink" href="#iosavetables" title="Permanent link">&para;</a></h2>
+<p>Save tables. The first column of each table saved has the partitioned attribute.
+See <a href="https://code.kx.com/q/ref/dsave/"><code>dsave</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>symbol | symbol[]</td>
+<td>A file, or a vector containing an HDB root directory and a partition name.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>symbol | symbol[]</td>
+<td>Table name(s)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol[]</td>
+<td>The list of table names that are saved.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iosplaytable">.io.splayTable<a class="headerlink" href="#iosplaytable" title="Permanent link">&para;</a></h2>
+<p>Splay table.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/get/#set"><code>set</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir</td>
+<td>symbol</td>
+<td>A directory path.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>table</td>
+<td>A table to be splayed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>The directory.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#ioloadsplayedtable"> .io.loadSplayedTable </a> <a href="io.html#iosplaytablecompressed"> .io.splayTableCompressed </a> <a href="io.html#iosplaytablecompressedperspec"> .io.splayTableCompressedPerSpec </a></p>
+<h2 id="iosplaytablecompressed">.io.splayTableCompressed<a class="headerlink" href="#iosplaytablecompressed" title="Permanent link">&para;</a></h2>
+<p>Splay table, compressed.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/get/#set"><code>set</code></a>.</li>
+<li>See <a href="https://code.kx.com/q/kb/file-compression/#compression-parameters"><code>Compression parameters</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir</td>
+<td>symbol</td>
+<td>A directory path.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>table</td>
+<td>A table to be splayed.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>integer</td>
+<td>Logical block size.</td>
+</tr>
+<tr>
+<td>algo</td>
+<td>integer</td>
+<td>Compression algorithm.</td>
+</tr>
+<tr>
+<td>level</td>
+<td>integer</td>
+<td>Compression level.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>The directory.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#iosplaytable"> .io.splayTable </a> <a href="io.html#iosplaytablecompressedperspec"> .io.splayTableCompressedPerSpec </a></p>
+<h2 id="iosplaytablecompressedperspec">.io.splayTableCompressedPerSpec<a class="headerlink" href="#iosplaytablecompressedperspec" title="Permanent link">&para;</a></h2>
+<p>Splay table, compressed using per-column compression specification.
+Compression for unspecified columns is specified either by an entry for the null symbol or by <code>.z.zd</code>.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/get/#set"><code>set</code></a>.</li>
+<li>See <a href="https://code.kx.com/q/kb/file-compression/#compression-parameters"><code>Compression parameters</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir</td>
+<td>symbol</td>
+<td>A directory path.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>table</td>
+<td>A table to be splayed.</td>
+</tr>
+<tr>
+<td>compSpec</td>
+<td>dict</td>
+<td>A dictionary whose keys are either columns names of the table or the null symbol,  and whose values are each an integer vector: size, algo, level.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>The directory.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See Also:</strong> <a href="io.html#iosplaytable"> .io.splayTable </a> <a href="io.html#iosplaytablecompressed"> .io.splayTableCompressed </a></p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="dt.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: dt" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              dt
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="math.html" class="md-footer__link md-footer__link--next" aria-label="Next: math" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              math
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
