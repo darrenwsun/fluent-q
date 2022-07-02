@@ -1,0 +1,17 @@
+feature Check if the argument represents a directory and it exists.
+
+    before
+        system "l io.q";
+        system "mkdir -p /tmp/fluent-q/io/isDir";
+        system "touch /tmp/fluent-q/io/isDir/file";
+
+    after
+        system "rm -rf /tmp/fluent-q/io/isDir";
+
+    should Check if the argument represents a file and it exists.
+        expect 1b for an existent directory.
+            .qu.compare[1b; .io.isDir hsym `$"/tmp/fluent-q/io/isDir"]
+        expect 0b for an existent file.
+            .qu.compare[0b; .io.isDir hsym `$"/tmp/fluent-q/io/isDir/file"]
+        expect 0b for an non-existent path.
+            .qu.compare[0b; .io.isDir hsym `$"/tmp/fluent-q/io/isDir/noexist"]

@@ -1,0 +1,21 @@
+feature Delete a file, or directory and its files and subdirectories recursively.
+
+    before
+        system "l io.q";
+
+    before each
+        system "mkdir -p /tmp/fluent-q/io/deleteAll/dir/subdir";
+        system "touch /tmp/fluent-q/io/deleteAll/dir/file";
+
+    after each
+        system "rm -rf /tmp/fluent-q/io/deleteAll";
+
+    should Delete a file.
+        expect The specified file is deleted
+            file:.io.deleteAll hsym `$"/tmp/fluent-q/io/deleteAll/dir/file";
+            .qu.compare[(); .io.list file]
+
+    should Delete a directory recursively.
+        expect The specified directory is deleted
+            file:.io.deleteAll hsym `$"/tmp/fluent-q/io/deleteAll/dir";
+            .qu.compare[(); .io.list file]

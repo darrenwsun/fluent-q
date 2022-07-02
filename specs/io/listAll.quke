@@ -1,0 +1,15 @@
+feature List file or directory recursively.
+
+    before
+        system "l io.q";
+        system "mkdir -p /tmp/fluent-q/io/listAll/dir/subdir";
+        system "touch /tmp/fluent-q/io/listAll/dir/file";
+
+    after
+        system "rm -rf /tmp/fluent-q/io/listAll/dir/subdir";
+
+    should List file or directory recursively.
+        expect files and subdirectories are listed recursively
+            .qu.compare[
+                hsym `$("/tmp/fluent-q/io/listAll/dir"; "/tmp/fluent-q/io/listAll/dir/file"; "/tmp/fluent-q/io/listAll/dir/subdir");
+                .io.listAll hsym `$"/tmp/fluent-q/io/listAll/dir"]
