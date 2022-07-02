@@ -166,3 +166,39 @@
 // @return {*} The splayed table.
 // @see .io.splayTable
 .io.loadSplayedTable:{[dir] get dir };
+
+// @kind function
+// @overview Read text from file.
+//
+// - See [`read0`](https://code.kx.com/q/ref/read0/#file-symbol).
+// @param file {symbol} A file symbol pointing to a file.
+// @return {string[]} Lines of the file as a list of strings. Lines are assumed delimited by either LF or CRLF,
+// and the delimiters are removed.
+.io.readTextFromFile:{[file] read0 file};
+
+// @kind function
+// @overview Read text of certain length from certain position.
+//
+// - See [`read0`](https://code.kx.com/q/ref/read0/#file-descriptor).
+// @param file {symbol} A file symbol pointing to a file.
+// @param pos {integer} Starting position to read.
+// @param len {integer} Length to read.
+// @return {string} Text of the given length from the given starting position.
+.io.readTextChunk:{[file;pos;len] read0 (file; pos; len)};
+
+// @kind function
+// @overview Read text from handle.
+//
+// - See [`read0`](https://code.kx.com/q/ref/read0/#system-or-process-handle).
+// @param handle {int} A system/process handle.
+// @return {string} Text from the given handle.
+.io.readTextFromHandle:{[handle] read0 handle};
+
+// @kind function
+// @overview Read text from named pipe.
+//
+// - See [`read0`](https://code.kx.com/q/ref/read0/#fifonamed-pipe).
+// @param handle {int} A handle to named pipe.
+// @param len {integer} Length to read.
+// @return {string} Text from the given handle.
+.io.readTextFromNamedPipe:{[handle;len] read0 (handle; len)};
