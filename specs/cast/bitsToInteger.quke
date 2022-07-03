@@ -1,0 +1,28 @@
+feature Cast bits to integer.
+
+    before
+      system "l cast.q";
+
+    should Cast 8 bits to a byte.
+      expect 0x01 from 8 bits (7#0b),1b
+        .qu.compare[0x01; .cast.bitsToInteger (7#0b),1b]
+
+    should Cast 16 bits to an short integer.
+      expect 1h from 16 bits (15#0b),1b
+        .qu.compare[1h; .cast.bitsToInteger (15#0b),1b]
+
+    should Cast 32 bits to an int integer.
+      expect 1i from 32 bits (31#0b),1b
+        .qu.compare[1i; .cast.bitsToInteger (31#0b),1b]
+
+    should Cast 64 bits to a long integer.
+      expect 1j from 64 bits (63#0b),1b
+        .qu.compare[1j; .cast.bitsToInteger (63#0b),1b]
+
+    should Throw "length" error if the number of bits is not 8/16/32/64.
+      expect "length" error if the number of bytes is 9.
+        .qu.compare["length"; @[.cast.bitsToInteger; 000000010b; {x}]]
+
+    should Throw "type" error if the data type is not bool vector.
+        expect "type" error if the data type is byte vector.
+            .qu.compare["type"; @[.cast.bitsToInteger; (7#0x0),0x01; {x}]]

@@ -13,7 +13,7 @@
     
     
       
-        <title>os - Fluent-Q Documentation</title>
+        <title>file - Fluent-Q Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#osgetenv" class="md-skip">
+        <a href="#filejoin" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              os
+              file
             
           </span>
         </div>
@@ -255,11 +255,48 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="file.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          file
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="file.html" class="md-nav__link md-nav__link--active">
         file
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#filejoin" class="md-nav__link">
+    .file.join
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -315,55 +352,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          os
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="os.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="os.html" class="md-nav__link">
         os
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#osgetenv" class="md-nav__link">
-    .os.getenv
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ossetenv" class="md-nav__link">
-    .os.setenv
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -423,15 +416,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#osgetenv" class="md-nav__link">
-    .os.getenv
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ossetenv" class="md-nav__link">
-    .os.setenv
+  <a href="#filejoin" class="md-nav__link">
+    .file.join
   </a>
   
 </li>
@@ -450,11 +436,11 @@
                 
 
 
-  <h1>os</h1>
+  <h1>file</h1>
 
-<h2 id="osgetenv">.os.getenv<a class="headerlink" href="#osgetenv" title="Permanent link">&para;</a></h2>
-<p>Get environment variable.
-See <a href="https://code.kx.com/q/ref/getenv/#getenv_1"><code>getenv</code></a>.</p>
+<h2 id="filejoin">.file.join<a class="headerlink" href="#filejoin" title="Permanent link">&para;</a></h2>
+<p>Join directories and file to form a path.
+See <a href="https://code.kx.com/q/ref/sv/#filepath-components"><code>sv</code></a>.</p>
 <p><strong>Parameter:</strong></p>
 <table>
 <thead>
@@ -466,9 +452,9 @@ See <a href="https://code.kx.com/q/ref/getenv/#getenv_1"><code>getenv</code></a>
 </thead>
 <tbody>
 <tr>
-<td>name</td>
-<td>symbol</td>
-<td>Name of an environment variable.</td>
+<td>items</td>
+<td>symbol[]</td>
+<td>A symbol list where the first is a file symbol.</td>
 </tr>
 </tbody>
 </table>
@@ -482,14 +468,11 @@ See <a href="https://code.kx.com/q/ref/getenv/#getenv_1"><code>getenv</code></a>
 </thead>
 <tbody>
 <tr>
-<td>string</td>
-<td>Value of the environment variable if it exists, otherwise empty string.</td>
+<td>symbol</td>
+<td>A file symbol by joining the items with slashes.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="ossetenv">.os.setenv<a class="headerlink" href="#ossetenv" title="Permanent link">&para;</a></h2>
-<p>Set environment variable.
-See <a href="https://code.kx.com/q/ref/getenv/#setenv"><code>setenv</code></a>.</p>
 
               
             </article>
@@ -505,7 +488,7 @@ See <a href="https://code.kx.com/q/ref/getenv/#setenv"><code>setenv</code></a>.<
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="math.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: math" rel="prev">
+        <a href="dt.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: dt" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -514,20 +497,20 @@ See <a href="https://code.kx.com/q/ref/getenv/#setenv"><code>setenv</code></a>.<
               <span class="md-footer__direction">
                 Previous
               </span>
-              math
+              dt
             </div>
           </div>
         </a>
       
       
         
-        <a href="rnd.html" class="md-footer__link md-footer__link--next" aria-label="Next: rnd" rel="next">
+        <a href="io.html" class="md-footer__link md-footer__link--next" aria-label="Next: io" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              rnd
+              io
             </div>
           </div>
           <div class="md-footer__button md-icon">

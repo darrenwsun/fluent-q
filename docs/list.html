@@ -13,7 +13,7 @@
     
     
       
-        <title>os - Fluent-Q Documentation</title>
+        <title>list - Fluent-Q Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#osgetenv" class="md-skip">
+        <a href="#listslice" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              os
+              list
             
           </span>
         </div>
@@ -285,11 +285,48 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="list.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          list
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="list.html" class="md-nav__link md-nav__link--active">
         list
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#listslice" class="md-nav__link">
+    .list.slice
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -315,55 +352,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          os
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="os.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="os.html" class="md-nav__link">
         os
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#osgetenv" class="md-nav__link">
-    .os.getenv
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ossetenv" class="md-nav__link">
-    .os.setenv
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -423,15 +416,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#osgetenv" class="md-nav__link">
-    .os.getenv
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ossetenv" class="md-nav__link">
-    .os.setenv
+  <a href="#listslice" class="md-nav__link">
+    .list.slice
   </a>
   
 </li>
@@ -450,12 +436,12 @@
                 
 
 
-  <h1>os</h1>
+  <h1>list</h1>
 
-<h2 id="osgetenv">.os.getenv<a class="headerlink" href="#osgetenv" title="Permanent link">&para;</a></h2>
-<p>Get environment variable.
-See <a href="https://code.kx.com/q/ref/getenv/#getenv_1"><code>getenv</code></a>.</p>
-<p><strong>Parameter:</strong></p>
+<h2 id="listslice">.list.slice<a class="headerlink" href="#listslice" title="Permanent link">&para;</a></h2>
+<p>Slice of a list.
+See <a href="https://code.kx.com/q/ref/sublist/#slice"><code>sublist</code></a>.</p>
+<p><strong>Parameters:</strong></p>
 <table>
 <thead>
 <tr>
@@ -466,9 +452,19 @@ See <a href="https://code.kx.com/q/ref/getenv/#getenv_1"><code>getenv</code></a>
 </thead>
 <tbody>
 <tr>
-<td>name</td>
-<td>symbol</td>
-<td>Name of an environment variable.</td>
+<td>list</td>
+<td>list</td>
+<td>A list.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>integer</td>
+<td>Starting position.</td>
+</tr>
+<tr>
+<td>len</td>
+<td>integer</td>
+<td>Length.</td>
 </tr>
 </tbody>
 </table>
@@ -482,14 +478,11 @@ See <a href="https://code.kx.com/q/ref/getenv/#getenv_1"><code>getenv</code></a>
 </thead>
 <tbody>
 <tr>
-<td>string</td>
-<td>Value of the environment variable if it exists, otherwise empty string.</td>
+<td>list</td>
+<td>A slice of the list starting at the given position and up to the given length.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="ossetenv">.os.setenv<a class="headerlink" href="#ossetenv" title="Permanent link">&para;</a></h2>
-<p>Set environment variable.
-See <a href="https://code.kx.com/q/ref/getenv/#setenv"><code>setenv</code></a>.</p>
 
               
             </article>
@@ -505,7 +498,7 @@ See <a href="https://code.kx.com/q/ref/getenv/#setenv"><code>setenv</code></a>.<
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="math.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: math" rel="prev">
+        <a href="io.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: io" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -514,20 +507,20 @@ See <a href="https://code.kx.com/q/ref/getenv/#setenv"><code>setenv</code></a>.<
               <span class="md-footer__direction">
                 Previous
               </span>
-              math
+              io
             </div>
           </div>
         </a>
       
       
         
-        <a href="rnd.html" class="md-footer__link md-footer__link--next" aria-label="Next: rnd" rel="next">
+        <a href="math.html" class="md-footer__link md-footer__link--next" aria-label="Next: math" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              rnd
+              math
             </div>
           </div>
           <div class="md-footer__button md-icon">

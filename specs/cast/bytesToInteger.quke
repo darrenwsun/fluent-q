@@ -1,0 +1,24 @@
+feature Cast bytes to integer.
+
+    before
+        system "l cast.q";
+
+    should Cast 2 bytes to a short integer.
+        expect 1h from 2 bytes 0x0001
+            .qu.compare[1h; .cast.bytesToInteger 0x0001]
+
+    should Cast 4 bytes to an int integer.
+        expect 1i from 4 bytes 0x00000001
+            .qu.compare[1i; .cast.bytesToInteger 0x00000001]
+
+    should Cast 8 bytes to a long integer.
+        expect 1j from 8 bytes 0x0000000000000001
+            .qu.compare[1j; .cast.bytesToInteger 0x0000000000000001]
+
+    should Throw "length" error if the number of bytes is not 2/4/8.
+        expect "length" error if the number of bytes is 3.
+            .qu.compare["length"; @[.cast.bytesToInteger; 0x000001; {x}]]
+
+    should Throw "type" error if the data type is not byte vector.
+        expect "type" error if the data type is bool vector.
+            .qu.compare["type"; @[.cast.bytesToInteger; 0001b; {x}]]
