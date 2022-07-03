@@ -505,3 +505,10 @@
 // @return {bool | bool[]} whether x is within the inclusive bounds given by y.
 .math.within:within;
 
+// @kind function
+// @overview Polynomial.
+// See [`sv`](https://code.kx.com/q/ref/sv/#base-to-integer).
+// @param coefficients {number[]} Coefficients of the polynomial.
+// @param x {number} A number where the polynomial is evaluated.
+// @return {number} A polynomial evaluated at x under the given coefficients.
+.math.polynomial:{[coefficients;x] x sv coefficients};
