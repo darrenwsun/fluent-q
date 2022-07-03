@@ -13,7 +13,7 @@
 //
 // - See [`sv`](https://code.kx.com/q/ref/sv/#bits-to-integer).
 // @param bits {bool[]} A vector of 8/16/32/64 booleans.
-// @return {integer} A corresponding byte or short/int/long integer.
+// @return {byte | integer} A corresponding byte or short/int/long integer.
 // @throws {length} If the length of bytes is not 8/16/32/64.
 // @throws {type} If the data type is not bool vector.
 .cast.bitsToInteger:{[bits] 0b sv bits };
@@ -22,7 +22,7 @@
 // @overview Cast integer to bytes.
 //
 // - See [`vs`](https://code.kx.com/q/ref/vs/#byte-representation).
-// @param number {number} A number.
+// @param number {integer} A number.
 // @return {byte[]} Byte representation of the integer.
 .cast.integerToBytes:{[number] 0x0 vs number };
 
@@ -30,6 +30,6 @@
 // @overview Cast integer to bits.
 //
 // - See [`vs`](https://code.kx.com/q/ref/vs/#bit-representation).
-// @param number {number} A number.
+// @param number {byte | integer} A number.
 // @return {bool[]} Bit representation of the integer.
 .cast.integerToBits:{[number] 0b vs number };
