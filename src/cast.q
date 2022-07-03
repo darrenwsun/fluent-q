@@ -22,7 +22,7 @@
 // @overview Cast integer to bytes.
 //
 // - See [`vs`](https://code.kx.com/q/ref/vs/#byte-representation).
-// @param number {integer} A number.
+// @param number {integer} An integer.
 // @return {byte[]} Byte representation of the integer.
 .cast.integerToBytes:{[number] 0x0 vs number };
 
@@ -30,6 +30,6 @@
 // @overview Cast integer to bits.
 //
 // - See [`vs`](https://code.kx.com/q/ref/vs/#bit-representation).
-// @param number {byte | integer} A number.
+// @param number {byte | integer} A byte or integer.
 // @return {bool[]} Bit representation of the integer.
 .cast.integerToBits:{[number] 0b vs number };
