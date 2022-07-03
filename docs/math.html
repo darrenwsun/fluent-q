@@ -549,6 +549,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mathpolycoefficients" class="md-nav__link">
+    .math.polyCoefficients
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mathpolynomial" class="md-nav__link">
     .math.polynomial
   </a>
@@ -1027,6 +1034,13 @@
         <li class="md-nav__item">
   <a href="#mathneg" class="md-nav__link">
     .math.neg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mathpolycoefficients" class="md-nav__link">
+    .math.polyCoefficients
   </a>
   
 </li>
@@ -2393,8 +2407,48 @@ See <a href="https://code.kx.com/q/ref/neg/"><code>neg</code></a>.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="mathpolycoefficients">.math.polyCoefficients<a class="headerlink" href="#mathpolycoefficients" title="Permanent link">&para;</a></h2>
+<p>Calculate polynomial coefficients.
+See <a href="https://code.kx.com/q/ref/vs/#base-x-representation"><code>vs</code></a>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>polynomial</td>
+<td>number</td>
+<td>A polynomial value.</td>
+</tr>
+<tr>
+<td>base</td>
+<td>number</td>
+<td>A number where the polynomial is evaluated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number[]</td>
+<td>Coefficients under which the polynomial value is obtained at the base value. Each of  the coefficients is smaller than the base.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="mathpolynomial">.math.polynomial<a class="headerlink" href="#mathpolynomial" title="Permanent link">&para;</a></h2>
-<p>Polynomial.
+<p>Calculate polynomial.
 See <a href="https://code.kx.com/q/ref/sv/#base-to-integer"><code>sv</code></a>.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -2412,7 +2466,7 @@ See <a href="https://code.kx.com/q/ref/sv/#base-to-integer"><code>sv</code></a>.
 <td>Coefficients of the polynomial.</td>
 </tr>
 <tr>
-<td>x</td>
+<td>base</td>
 <td>number</td>
 <td>A number where the polynomial is evaluated.</td>
 </tr>

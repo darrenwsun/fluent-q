@@ -270,6 +270,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#castintegertobits" class="md-nav__link">
+    .cast.integerToBits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#castintegertobytes" class="md-nav__link">
+    .cast.integerToBytes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -436,6 +450,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#castintegertobits" class="md-nav__link">
+    .cast.integerToBits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#castintegertobytes" class="md-nav__link">
+    .cast.integerToBytes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -499,12 +527,12 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td>"length" If the length of bytes is not 8/16/32/64.</td>
+<td>length</td>
+<td>If the length of bytes is not 8/16/32/64.</td>
 </tr>
 <tr>
-<td></td>
-<td>"type" If the data type is not bool vector.</td>
+<td>type</td>
+<td>If the data type is not bool vector.</td>
 </tr>
 </tbody>
 </table>
@@ -561,6 +589,80 @@
 <tr>
 <td>type</td>
 <td>If the data type is not byte vector.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="castintegertobits">.cast.integerToBits<a class="headerlink" href="#castintegertobits" title="Permanent link">&para;</a></h2>
+<p>Cast integer to bits.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/vs/#bit-representation"><code>vs</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool[]</td>
+<td>Bit representation of the integer.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="castintegertobytes">.cast.integerToBytes<a class="headerlink" href="#castintegertobytes" title="Permanent link">&para;</a></h2>
+<p>Cast integer to bytes.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/vs/#byte-representation"><code>vs</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>number</td>
+<td>A number.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte[]</td>
+<td>Byte representation of the integer.</td>
 </tr>
 </tbody>
 </table>

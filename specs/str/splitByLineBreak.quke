@@ -1,0 +1,12 @@
+feature String split by line break.
+
+    before
+        system "l str.q";
+
+    should Split a string by Linux-style line break
+        expect ("one"; "two") given the string "one\ntwo".
+            .qu.compare[("one"; "two"); .str.splitByLineBreak["one\ntwo"]]
+
+    should Split a string by Window-style line break
+        expect ("one"; "two") given the string "one\r\ntwo".
+            .qu.compare[("one"; "two"); .str.splitByLineBreak["one\r\ntwo"]]

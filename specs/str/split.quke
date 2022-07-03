@@ -1,0 +1,8 @@
+feature String split.
+
+    before
+        system "l str.q";
+
+    should Split a string by a delimiter
+        expect ("one"; "two") given the string "one,two" and the delimiter ",".
+            .qu.compare[("one"; "two"); .str.split["one,two"; ","]]

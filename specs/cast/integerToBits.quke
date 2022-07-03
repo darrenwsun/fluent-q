@@ -1,0 +1,20 @@
+feature Cast integer to bits.
+
+    before
+      system "l cast.q";
+
+    should Cast a byte to 8 bits.
+      expect (7#0b),1b from .cast.integerToBits 0x01
+        .qu.compare[(7#0b),1b; .cast.integerToBits 0x01]
+
+    should Cast a short integer to 16 bits.
+      expect (15#0b),1b from .cast.integerToBits 1h
+        .qu.compare[(15#0b),1b; .cast.integerToBits 1h]
+
+    should Cast an int integer to 32 bits.
+      expect (31#0b),1b from .cast.integerToBits 1i
+        .qu.compare[(31#0b),1b; .cast.integerToBits 1i]
+
+    should Cast a long integer to 64 bits.
+      expect (63#0b),1b from .cast.integerToBits 1j
+        .qu.compare[(63#0b),1b; .cast.integerToBits 1j]

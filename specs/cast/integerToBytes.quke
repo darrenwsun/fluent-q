@@ -1,0 +1,16 @@
+feature Cast integer to bytes.
+
+    before
+        system "l cast.q";
+
+    should Cast a short integer to 2 bytes.
+        expect 0x0001 from .cast.integerToBytes 1h
+            .qu.compare[0x0001; .cast.integerToBytes 1h]
+
+    should Cast an int integer to 4 bytes.
+        expect 0x00000001 from .cast.integerToBytes 1i
+            .qu.compare[0x00000001; .cast.integerToBytes 1i]
+
+    should Cast a long integer to 8 bytes.
+        expect 0x0000000000000001 from .cast.integerToBytes 1j
+            .qu.compare[0x0000000000000001; .cast.integerToBytes 1j]

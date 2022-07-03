@@ -506,9 +506,18 @@
 .math.within:within;
 
 // @kind function
-// @overview Polynomial.
+// @overview Calculate polynomial.
 // See [`sv`](https://code.kx.com/q/ref/sv/#base-to-integer).
 // @param coefficients {number[]} Coefficients of the polynomial.
-// @param x {number} A number where the polynomial is evaluated.
+// @param base {number} A number where the polynomial is evaluated.
 // @return {number} A polynomial evaluated at x under the given coefficients.
-.math.polynomial:{[coefficients;x] x sv coefficients};
+.math.polynomial:{[coefficients;base] base sv coefficients};
+
+// @kind function
+// @overview Calculate polynomial coefficients.
+// See [`vs`](https://code.kx.com/q/ref/vs/#base-x-representation).
+// @param polynomial {number} A polynomial value.
+// @param base {number} A number where the polynomial is evaluated.
+// @return {number[]} Coefficients under which the polynomial value is obtained at the base value. Each of
+// the coefficients is smaller than the base.
+.math.polyCoefficients:{[polynomial;base] base vs polynomial};

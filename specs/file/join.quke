@@ -1,0 +1,8 @@
+feature Join directories and file to form a path.
+
+    before
+        system "l file.q";
+
+    should Join directories and file to form a path.
+        expect `:/hdb/2022.01.01/trade from .file.join[`:/hdb`2022.01.01`trade].
+            .qu.compare[`:/hdb/2022.01.01/trade; .file.join[`:/hdb`2022.01.01`trade]]

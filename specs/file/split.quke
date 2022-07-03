@@ -1,0 +1,8 @@
+feature Split file path into directory and file parts.
+
+    before
+        system "l file.q";
+
+    should Split file path into directory and file parts.
+        expect `:/hdb/2022.01.01`trade from .file.split[`:/hdb/2022.01.01/trade].
+            .qu.compare[`:/hdb/2022.01.01`trade; .file.split[`:/hdb/2022.01.01/trade]]

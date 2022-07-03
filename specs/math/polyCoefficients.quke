@@ -1,0 +1,8 @@
+feature Calculate polynomial coefficients.
+
+    before
+        system "l math.q";
+
+    should Return coefficients under which a polynomial value is obtained at a base value.
+        expect `20 10 3 17` from `.math.polyCoefficients[20100317; 100]`.
+            .qu.compare[20 10 3 17; .math.polyCoefficients[20100317; 100]]

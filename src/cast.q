@@ -17,3 +17,19 @@
 // @throws {length} If the length of bytes is not 8/16/32/64.
 // @throws {type} If the data type is not bool vector.
 .cast.bitsToInteger:{[bits] 0b sv bits };
+
+// @kind function
+// @overview Cast integer to bytes.
+//
+// - See [`vs`](https://code.kx.com/q/ref/vs/#byte-representation).
+// @param number {number} A number.
+// @return {byte[]} Byte representation of the integer.
+.cast.integerToBytes:{[number] 0x0 vs number };
+
+// @kind function
+// @overview Cast integer to bits.
+//
+// - See [`vs`](https://code.kx.com/q/ref/vs/#bit-representation).
+// @param number {number} A number.
+// @return {bool[]} Bit representation of the integer.
+.cast.integerToBits:{[number] 0b vs number };

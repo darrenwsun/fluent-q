@@ -384,8 +384,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#strjoinbynewline" class="md-nav__link">
-    .str.joinByNewLine
+  <a href="#strjoinbylinebreak" class="md-nav__link">
+    .str.joinByLineBreak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strsplit" class="md-nav__link">
+    .str.split
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strsplitbylinebreak" class="md-nav__link">
+    .str.splitByLineBreak
   </a>
   
 </li>
@@ -430,8 +444,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#strjoinbynewline" class="md-nav__link">
-    .str.joinByNewLine
+  <a href="#strjoinbylinebreak" class="md-nav__link">
+    .str.joinByLineBreak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strsplit" class="md-nav__link">
+    .str.split
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strsplitbylinebreak" class="md-nav__link">
+    .str.splitByLineBreak
   </a>
   
 </li>
@@ -494,8 +522,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="strjoinbynewline">.str.joinByNewLine<a class="headerlink" href="#strjoinbynewline" title="Permanent link">&para;</a></h2>
-<p>String join by new line.</p>
+<h2 id="strjoinbylinebreak">.str.joinByLineBreak<a class="headerlink" href="#strjoinbylinebreak" title="Permanent link">&para;</a></h2>
+<p>String join by line break.</p>
 <ul>
 <li>See <a href="https://code.kx.com/q/ref/sv/#strings"><code>sv</code></a>.</li>
 </ul>
@@ -527,7 +555,86 @@
 <tbody>
 <tr>
 <td>string</td>
-<td>A string formed by the strings joined by system-dependent new line.</td>
+<td>A string formed by the strings joined by OS-dependent line break.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="strsplit">.str.split<a class="headerlink" href="#strsplit" title="Permanent link">&para;</a></h2>
+<p>String split.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/vs/#string-by-char"><code>vs</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>string</td>
+<td>A string.</td>
+</tr>
+<tr>
+<td>delimiter</td>
+<td>char | string</td>
+<td>Delimiter.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string[]</td>
+<td>A list of strings split by the delimiter.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="strsplitbylinebreak">.str.splitByLineBreak<a class="headerlink" href="#strsplitbylinebreak" title="Permanent link">&para;</a></h2>
+<p>String split by line break.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/vs/#string-or-bytestream-by-linebreak"><code>vs</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>string</td>
+<td>A string.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string[]</td>
+<td>A list of strings split by line break. It works for both Unix- and Windows-style line breaks.</td>
 </tr>
 </tbody>
 </table>

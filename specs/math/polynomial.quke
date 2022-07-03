@@ -1,0 +1,8 @@
+feature Calculate polynomial.
+
+    before
+        system "l math.q";
+
+    should Return a polynomial evaluated at given base under given coefficients.
+        expect 20100317 from .math.polynomial[2010 3 17; 100].
+            .qu.compare[20100317; .math.polynomial[2010 3 17; 100]]
