@@ -1,6 +1,7 @@
 // @kind function
 // @overview Slice of a list.
-// See [`sublist`](https://code.kx.com/q/ref/sublist/#slice).
+//
+// - See [`sublist`](https://code.kx.com/q/ref/sublist/#slice).
 // @param list {list} A list.
 // @param pos {integer} Starting position.
 // @param len {integer} Length.
