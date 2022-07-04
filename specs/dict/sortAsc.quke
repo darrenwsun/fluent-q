@@ -1,0 +1,9 @@
+feature Sort dictionary in ascending order of value.
+
+    before
+      system "l dict.q";
+
+    should Sort a dictionary in ascending order of value.
+      expect `b`a!`s#1 2 from .dict.sortAsc[`a`b!2 1].
+        result:.dict.sortAsc[`a`b!2 1];
+        .qu.compare[`b`a!1 2; result] and .qu.compare[`s; attr value result]

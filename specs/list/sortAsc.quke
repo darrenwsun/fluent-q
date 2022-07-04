@@ -1,0 +1,9 @@
+feature Sort vector in ascending order.
+
+    before
+      system "l list.q";
+
+    should Sort a vector in ascending order.
+      expect `s#1 2 3 from .list.sortAsc[2 1 3].
+        result:.list.sortAsc[2 1 3];
+        .qu.compare[1 2 3; result] and .qu.compare[`s; attr result]

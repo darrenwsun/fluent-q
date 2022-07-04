@@ -15,3 +15,11 @@
 // @param times {dict} A mapping between elements to repeat and the number of times they are repeated.
 // @return {list} A list where the keys are repeated by the corresponding number of times.
 .list.repeat:{[times] where times };
+
+// @kind function
+// @overview Sort vector in ascending order.
+//
+// - See [`asc`](https://code.kx.com/q/ref/asc/#vector).
+// @param vector {*[]} A vector.
+// @return {*[]} A vector of the same items but sorted in ascending order of value, with the sorted attribute set.
+.list.sortAsc:{[vector] asc vector };
