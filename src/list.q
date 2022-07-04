@@ -23,3 +23,11 @@
 // @param vector {*[]} A vector.
 // @return {*[]} A vector of the same items but sorted in ascending order of value, with the sorted attribute set.
 .list.sortAsc:{[vector] asc vector };
+
+// @kind function
+// @overview Indices for ascending sort.
+//
+// - See [`iasc`](https://code.kx.com/q/ref/asc/#iasc).
+// @param vector {*[]} A vector.
+// @return {long[]} Indices needed to sort the vector in ascending order.
+.list.argSort:{[vector] iasc vector };
