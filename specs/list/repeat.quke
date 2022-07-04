@@ -1,0 +1,8 @@
+feature Repeat.
+
+    before
+        system "l list.q";
+
+    should Repeat keys for the corresponding number of times.
+        expect `a`b`b from .list.repeat[`a`b!1 2].
+            .qu.compare[`a`b`b; .list.repeat[`a`b!1 2]]

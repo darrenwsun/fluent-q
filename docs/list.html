@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#listslice" class="md-skip">
+        <a href="#listrepeat" class="md-skip">
           Skip to content
         </a>
       
@@ -317,6 +317,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#listrepeat" class="md-nav__link">
+    .list.repeat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listslice" class="md-nav__link">
     .list.slice
   </a>
@@ -416,6 +423,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#listrepeat" class="md-nav__link">
+    .list.repeat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listslice" class="md-nav__link">
     .list.slice
   </a>
@@ -438,6 +452,43 @@
 
   <h1>list</h1>
 
+<h2 id="listrepeat">.list.repeat<a class="headerlink" href="#listrepeat" title="Permanent link">&para;</a></h2>
+<p>Repeat.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/where/#dictionary-whose-values-are-non-negative-integers"><code>where</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>times</td>
+<td>dict</td>
+<td>A mapping between elements to repeat and the number of times they are repeated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>A list where the keys are repeated by the corresponding number of times.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="listslice">.list.slice<a class="headerlink" href="#listslice" title="Permanent link">&para;</a></h2>
 <p>Slice of a list.</p>
 <ul>
