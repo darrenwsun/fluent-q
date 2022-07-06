@@ -1,0 +1,14 @@
+feature Sort table in ascending order by given columns.
+
+    before
+      system "l tbl.q";
+
+    should Sort a simple table in ascending order by given columns.
+      expect ```([] c1:`s#`a`b; c2:1 2)``` from ```.tbl.sortAscByColumns[([] c1:`b`a; c2:2 1); `c1]```.
+        result:.tbl.sortAscByColumns[([] c1:`b`a; c2:2 1); `c1];
+        .qu.compare[([] c1:`a`b; c2:1 2); result] and .qu.compare[`s; attr result`c1]
+
+    should Sort a keyed table in ascending order by given columns.
+      expect ```([c1:`b`a] c2:`s#1 2)``` from ```.tbl.sortAscByColumns[([c1:`a`b] c2:2 1); `c2]```.
+        result:.tbl.sortAscByColumns[([c1:`a`b] c2:2 1); `c2];
+        .qu.compare[([c1:`b`a] c2:1 2); result] and .qu.compare[`s; attr (0!result)`c2]
