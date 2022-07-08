@@ -1,0 +1,18 @@
+feature Sort table in descending order of the first non-key column.
+
+    before
+      system "l tbl.q";
+
+    should Sort a simple table in descending order of the first column.
+      expect ```([] c1:`b`a; c2:2 1)``` from ```.tbl.sortDesc[([] c1:`a`b; c2:1 2)]```.
+        .qu.compare[
+          .tbl.sortDesc[([] c1:`a`b; c2:1 2)];
+          ([] c1:`b`a; c2:2 1)
+         ]
+
+    should Sort a keyed table in descending order of the first non-key column.
+      expect ```([c1:`b`a] c2:2 1)``` from ```.tbl.sortDesc[([c1:`a`b] c2:1 2)]```.
+        .qu.compare[
+          .tbl.sortDesc[([c1:`a`b] c2:1 2)];
+          ([c1:`b`a] c2:2 1)
+         ]

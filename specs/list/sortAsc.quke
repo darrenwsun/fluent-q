@@ -6,4 +6,4 @@ feature Sort vector in ascending order.
     should Sort a vector in ascending order.
       expect `s#1 2 3 from .list.sortAsc[2 1 3].
         result:.list.sortAsc[2 1 3];
-        .qu.compare[1 2 3; result] and .qu.compare[`s; attr result]
+        .qu.compare[result; 1 2 3] and .qu.compare[attr result; `s]

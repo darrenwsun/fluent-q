@@ -1,0 +1,8 @@
+feature Sort vector in descending order.
+
+    before
+      system "l list.q";
+
+    should Sort a vector in descending order.
+      expect 3 2 1 from .list.sortDesc[2 1 3].
+        .qu.compare[.list.sortDesc[2 1 3]; 3 2 1]

@@ -7,6 +7,14 @@
 .dict.sortAsc:{[dict] asc dict };
 
 // @kind function
+// @overview Sort dictionary value in descending order of value.
+//
+// - See [`desc`](https://code.kx.com/q/ref/desc/#desc).
+// @param dict {dict} A dictionary.
+// @return {dict} A dictionary of the same elements sorted in descending order of value.
+.dict.sortDesc:{[dict] desc dict };
+
+// @kind function
 // @overview Keys for ascending sort.
 //
 // - See [`iasc`](https://code.kx.com/q/ref/asc/#iasc).

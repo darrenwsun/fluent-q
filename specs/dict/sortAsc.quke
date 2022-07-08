@@ -4,6 +4,6 @@ feature Sort dictionary in ascending order of value.
       system "l dict.q";
 
     should Sort a dictionary in ascending order of value.
-      expect `b`a!`s#1 2 from .dict.sortAsc[`a`b!2 1].
-        result:.dict.sortAsc[`a`b!2 1];
-        .qu.compare[`b`a!1 2; result] and .qu.compare[`s; attr value result]
+      expect `b`a`c!`s#1 2 3 from .dict.sortAsc[`a`b`c!2 1 3].
+        result:.dict.sortAsc[`a`b`c!2 1 3];
+        .qu.compare[result; `b`a`c!1 2 3] and .qu.compare[attr value result; `s]

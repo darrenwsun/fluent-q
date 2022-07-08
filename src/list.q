@@ -25,6 +25,14 @@
 .list.sortAsc:{[vector] asc vector };
 
 // @kind function
+// @overview Sort vector in descending order.
+//
+// - See [`desc`](https://code.kx.com/q/ref/desc/#desc).
+// @param vector {*[]} A vector.
+// @return {*[]} A vector of the same items but sorted in descending order of value.
+.list.sortDesc:{[vector] desc vector };
+
+// @kind function
 // @overview Indices for ascending sort.
 //
 // - See [`iasc`](https://code.kx.com/q/ref/asc/#iasc).

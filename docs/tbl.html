@@ -420,6 +420,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tblsortdesc" class="md-nav__link">
+    .tbl.sortDesc
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -462,6 +469,13 @@
         <li class="md-nav__item">
   <a href="#tblsortascbycolumns" class="md-nav__link">
     .tbl.sortAscByColumns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblsortdesc" class="md-nav__link">
+    .tbl.sortDesc
   </a>
   
 </li>
@@ -515,7 +529,7 @@
 <tbody>
 <tr>
 <td>table | keyed table</td>
-<td>The table or keyed table sorted by the first non-key column,  with the sorted attribute set on it if there is only one non-key column, otherwise the partitioned attribute set.</td>
+<td>The table or keyed table sorted in ascending order by the first non-key column,  with the sorted attribute set on it if there is only one non-key column, otherwise the partitioned attribute set.</td>
 </tr>
 </tbody>
 </table>
@@ -558,6 +572,43 @@
 <tr>
 <td>table | keyed table | symbol</td>
 <td>The table sorted by the columns, if the table is passed by value,  otherwise the table name itself where the sorting is in place. The sorted attribute is set on the first column.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tblsortdesc">.tbl.sortDesc<a class="headerlink" href="#tblsortdesc" title="Permanent link">&para;</a></h2>
+<p>Sort table in descending order by first non-key column.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/desc/#desc"><code>desc</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table</td>
+<td>A table or keyed table.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table | keyed table</td>
+<td>The table or keyed table sorted in descending order by the first non-key column.</td>
 </tr>
 </tbody>
 </table>
