@@ -30,4 +30,12 @@
 // - See [`iasc`](https://code.kx.com/q/ref/asc/#iasc).
 // @param vector {*[]} A vector.
 // @return {long[]} Indices needed to sort the vector in ascending order.
-.list.argSort:{[vector] iasc vector };
+.list.argSortAsc:{[vector] iasc vector };
+
+// @kind function
+// @overview Position in the ascending sorted list.
+//
+// - See [`rank`](https://code.kx.com/q/ref/rank/).
+// @param vector {*[]} A vector.
+// @return {long[]} Indices of elements they would appear at in the ascending sorted list.
+.list.rankAsc:{[vector] rank vector };

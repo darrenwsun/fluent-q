@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#listargsort" class="md-skip">
+        <a href="#listargsortasc" class="md-skip">
           Skip to content
         </a>
       
@@ -332,8 +332,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#listargsort" class="md-nav__link">
-    .list.argSort
+  <a href="#listargsortasc" class="md-nav__link">
+    .list.argSortAsc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listrankasc" class="md-nav__link">
+    .list.rankAsc
   </a>
   
 </li>
@@ -467,8 +474,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#listargsort" class="md-nav__link">
-    .list.argSort
+  <a href="#listargsortasc" class="md-nav__link">
+    .list.argSortAsc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listrankasc" class="md-nav__link">
+    .list.rankAsc
   </a>
   
 </li>
@@ -510,7 +524,7 @@
 
   <h1>list</h1>
 
-<h2 id="listargsort">.list.argSort<a class="headerlink" href="#listargsort" title="Permanent link">&para;</a></h2>
+<h2 id="listargsortasc">.list.argSortAsc<a class="headerlink" href="#listargsortasc" title="Permanent link">&para;</a></h2>
 <p>Indices for ascending sort.</p>
 <ul>
 <li>See <a href="https://code.kx.com/q/ref/asc/#iasc"><code>iasc</code></a>.</li>
@@ -544,6 +558,43 @@
 <tr>
 <td>long[]</td>
 <td>Indices needed to sort the vector in ascending order.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listrankasc">.list.rankAsc<a class="headerlink" href="#listrankasc" title="Permanent link">&para;</a></h2>
+<p>Position in the ascending sorted list.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/rank/"><code>rank</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vector</td>
+<td>*[]</td>
+<td>A vector.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long[]</td>
+<td>Indices of elements they would appear at in the ascending sorted list.</td>
 </tr>
 </tbody>
 </table>
