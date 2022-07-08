@@ -1,0 +1,8 @@
+feature Indices for descending sort.
+
+    before
+      system "l list.q";
+
+    should Get indices needed to sort vector in descending order.
+      expect `0 2 1` from `.list.argSortDesc[3 1 2]`.
+        .qu.compare[.list.argSortDesc[3 1 2]; 0 2 1]

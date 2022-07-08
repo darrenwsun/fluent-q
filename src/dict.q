@@ -23,6 +23,14 @@
 .dict.argSortAsc:{[dict] iasc dict };
 
 // @kind function
+// @overview Keys for descending sort.
+//
+// - See [`idesc`](https://code.kx.com/q/ref/desc/#idesc).
+// @param dict {dict} A dictionary.
+// @return {list} Keys reordered to sort the dictionary in descending order.
+.dict.argSortDesc:{[dict] idesc dict };
+
+// @kind function
 // @overview Position in the ascending sorted dictionary.
 //
 // - See [`rank`](https://code.kx.com/q/ref/rank/).

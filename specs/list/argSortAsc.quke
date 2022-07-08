@@ -5,4 +5,4 @@ feature Indices for ascending sort.
 
     should Get indices needed to sort vector in ascending order.
       expect `1 2 0` from `.list.argSortAsc[3 1 2]`.
-        .qu.compare[1 2 0; .list.argSortAsc[3 1 2]]
+        .qu.compare[.list.argSortAsc[3 1 2]; 1 2 0]

@@ -1,0 +1,8 @@
+feature Keys for descending sort.
+
+    before
+      system "l dict.q";
+
+    should Get keys reordered to sort a dictionary in descending order.
+      expect ````b`a``` from `.dict.argSortDesc[`a`b!1 2]`.
+        .qu.compare[.dict.argSortDesc[`a`b!1 2]; `b`a]

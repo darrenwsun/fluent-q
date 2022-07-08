@@ -41,6 +41,14 @@
 .list.argSortAsc:{[vector] iasc vector };
 
 // @kind function
+// @overview Indices for descending sort.
+//
+// - See [`idesc`](https://code.kx.com/q/ref/desc/#idesc).
+// @param vector {*[]} A vector.
+// @return {long[]} Indices needed to sort the vector in descending order.
+.list.argSortDesc:{[vector] idesc vector };
+
+// @kind function
 // @overview Position in the ascending sorted list.
 //
 // - See [`rank`](https://code.kx.com/q/ref/rank/).
