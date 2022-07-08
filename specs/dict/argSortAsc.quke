@@ -4,5 +4,5 @@ feature Keys for ascending sort.
       system "l dict.q";
 
     should Get keys reordered to sort a dictionary in ascending order.
-      expect ````b`a``` from `.dict.argSort[`a`b!2 1]`.
-        .qu.compare[`b`a; .dict.argSort[`a`b!2 1]]
+      expect ````b`a``` from `.dict.argSortAsc[`a`b!2 1]`.
+        .qu.compare[`b`a; .dict.argSortAsc[`a`b!2 1]]

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dictargsort" class="md-skip">
+        <a href="#dictargsortasc" class="md-skip">
           Skip to content
         </a>
       
@@ -272,8 +272,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dictargsort" class="md-nav__link">
-    .dict.argSort
+  <a href="#dictargsortasc" class="md-nav__link">
+    .dict.argSortAsc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictrankasc" class="md-nav__link">
+    .dict.rankAsc
   </a>
   
 </li>
@@ -453,8 +460,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dictargsort" class="md-nav__link">
-    .dict.argSort
+  <a href="#dictargsortasc" class="md-nav__link">
+    .dict.argSortAsc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictrankasc" class="md-nav__link">
+    .dict.rankAsc
   </a>
   
 </li>
@@ -482,7 +496,7 @@
 
   <h1>dict</h1>
 
-<h2 id="dictargsort">.dict.argSort<a class="headerlink" href="#dictargsort" title="Permanent link">&para;</a></h2>
+<h2 id="dictargsortasc">.dict.argSortAsc<a class="headerlink" href="#dictargsortasc" title="Permanent link">&para;</a></h2>
 <p>Keys for ascending sort.</p>
 <ul>
 <li>See <a href="https://code.kx.com/q/ref/asc/#iasc"><code>iasc</code></a>.</li>
@@ -516,6 +530,43 @@
 <tr>
 <td>list</td>
 <td>Keys reordered to sort the dictionary in ascending order.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dictrankasc">.dict.rankAsc<a class="headerlink" href="#dictrankasc" title="Permanent link">&para;</a></h2>
+<p>Position in the ascending sorted dictionary.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/rank/"><code>rank</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vector</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long[]</td>
+<td>Indices of values they would appear at in the ascending sorted list.</td>
 </tr>
 </tbody>
 </table>

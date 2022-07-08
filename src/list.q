@@ -39,3 +39,21 @@
 // @param vector {*[]} A vector.
 // @return {long[]} Indices of elements they would appear at in the ascending sorted list.
 .list.rankAsc:{[vector] rank vector };
+
+// @kind function
+// @overview Binary search - last index of not greater value. This function is right-atomic.
+//
+// - See [`bin`](https://code.kx.com/q/ref/bin/).
+// @param vector {*[]} A sorted vector.
+// @param target {*} A value.
+// @return {long} Index of the last item in the vector whose value is not greater than the target.
+.list.binSearchLast:{[vector;target] vector bin target };
+
+// @kind function
+// @overview Binary search - first index of not smaller value. This function is right-atomic.
+//
+// - See [`bin`](https://code.kx.com/q/ref/bin/).
+// @param vector {*[]} A sorted vector.
+// @param target {*} A value.
+// @return {long} Index of the first item in the vector whose value is not smaller than the target.
+.list.binSearchFirst:{[vector;target] vector binr target };

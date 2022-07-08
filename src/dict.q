@@ -12,4 +12,12 @@
 // - See [`iasc`](https://code.kx.com/q/ref/asc/#iasc).
 // @param dict {dict} A dictionary.
 // @return {list} Keys reordered to sort the dictionary in ascending order.
-.dict.argSort:{[dict] iasc dict };
+.dict.argSortAsc:{[dict] iasc dict };
+
+// @kind function
+// @overview Position in the ascending sorted dictionary.
+//
+// - See [`rank`](https://code.kx.com/q/ref/rank/).
+// @param dict {dict} A dictionary.
+// @return {long[]} Indices of values they would appear at in the ascending sorted list.
+.dict.rankAsc:{[vector] rank vector };

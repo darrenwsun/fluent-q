@@ -1,0 +1,16 @@
+feature Binary search - first index of not smaller value.
+
+    before
+      system "l list.q";
+
+    should Get index of the first item in the vector whose value is not smaller than the target.
+      expect `1` from `.list.binSearchFirst[0 2 2 4; 2]`.
+        .qu.compare[.list.binSearchFirst[0 2 2 4; 2]; 1]
+      expect `3` from `.list.binSearchFirst[0 2 2 4; 3]`.
+        .qu.compare[.list.binSearchFirst[0 2 2 4; 3]; 3]
+      expect `3 4` from `.list.binSearchFirst[0 2 2 4; 3 5]`.
+        .qu.compare[.list.binSearchFirst[0 2 2 4; 3 5]; 3 4]
+
+    should Get the length of the list if the target is larger than the last element.
+      expect `4` from `.list.binSearchFirst[0 2 2 4; 5]`.
+        .qu.compare[.list.binSearchFirst[0 2 2 4; 5]; 4]

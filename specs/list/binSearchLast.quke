@@ -1,0 +1,16 @@
+feature Binary search - last index of not greater value.
+
+    before
+      system "l list.q";
+
+    should Get index of the last item in the vector whose value is not greater than the target.
+      expect `2` from `.list.binSearchLast[0 2 2 4; 2]`.
+        .qu.compare[.list.binSearchLast[0 2 2 4; 2]; 2]
+      expect `2` from `.list.binSearchLast[0 2 2 4; 3]`.
+        .qu.compare[.list.binSearchLast[0 2 2 4; 3]; 2]
+      expect `2 3` from `.list.binSearchLast[0 2 2 4; 3 5]`.
+        .qu.compare[.list.binSearchLast[0 2 2 4; 3 5]; 2 3]
+
+    should Get -1 if the target is smaller than the first element.
+      expect `-1` from `.list.binSearchLast[0 2 2 4; -2]`.
+        .qu.compare[.list.binSearchLast[0 2 2 4; -2]; -1]

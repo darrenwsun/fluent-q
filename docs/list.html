@@ -339,6 +339,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listbinsearchfirst" class="md-nav__link">
+    .list.binSearchFirst
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listbinsearchlast" class="md-nav__link">
+    .list.binSearchLast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listrankasc" class="md-nav__link">
     .list.rankAsc
   </a>
@@ -481,6 +495,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listbinsearchfirst" class="md-nav__link">
+    .list.binSearchFirst
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listbinsearchlast" class="md-nav__link">
+    .list.binSearchLast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listrankasc" class="md-nav__link">
     .list.rankAsc
   </a>
@@ -558,6 +586,90 @@
 <tr>
 <td>long[]</td>
 <td>Indices needed to sort the vector in ascending order.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listbinsearchfirst">.list.binSearchFirst<a class="headerlink" href="#listbinsearchfirst" title="Permanent link">&para;</a></h2>
+<p>Binary search - first index of not smaller value. This function is right-atomic.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/bin/"><code>bin</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vector</td>
+<td>*[]</td>
+<td>A sorted vector.</td>
+</tr>
+<tr>
+<td>target</td>
+<td>*</td>
+<td>A value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long</td>
+<td>Index of the first item in the vector whose value is not smaller than the target.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listbinsearchlast">.list.binSearchLast<a class="headerlink" href="#listbinsearchlast" title="Permanent link">&para;</a></h2>
+<p>Binary search - last index of not greater value. This function is right-atomic.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/bin/"><code>bin</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vector</td>
+<td>*[]</td>
+<td>A sorted vector.</td>
+</tr>
+<tr>
+<td>target</td>
+<td>*</td>
+<td>A value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long</td>
+<td>Index of the last item in the vector whose value is not greater than the target.</td>
 </tr>
 </tbody>
 </table>
