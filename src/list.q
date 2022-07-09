@@ -57,6 +57,14 @@
 .list.rankAsc:{[vector] rank vector };
 
 // @kind function
+// @overview Position in the descending sorted list.
+//
+// - See [`rank`](https://code.kx.com/q/ref/rank/).
+// @param vector {*[]} A vector.
+// @return {long[]} Indices of elements they would appear at in the descending sorted list.
+.list.rankDesc:{[vector] rank neg vector };
+
+// @kind function
 // @overview Binary search - last index of not greater value. This function is right-atomic.
 //
 // - See [`bin`](https://code.kx.com/q/ref/bin/).

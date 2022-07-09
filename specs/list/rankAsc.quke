@@ -5,4 +5,4 @@ feature Position in the ascending sorted list.
 
     should Get indices of elements they would appear at in the ascending sorted list.
       expect `2 0 1` from `.list.rankAsc[3 1 2]`.
-        .qu.compare[2 0 1; .list.rankAsc[3 1 2]]
+        .qu.compare[.list.rankAsc[3 1 2]; 2 0 1]

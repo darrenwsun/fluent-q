@@ -1,0 +1,8 @@
+feature Position in the descending sorted dictionary.
+
+    before
+      system "l dict.q";
+
+    should Get indices of values they would appear at in the descending sorted list.
+      expect `0 2 1` from `.dict.rankDesc[`a`b`c!3 1 2]`.
+        .qu.compare[.dict.rankDesc[`a`b`c!3 1 2]; 0 2 1]

@@ -1,0 +1,8 @@
+feature Position in the descending sorted list.
+
+    before
+      system "l list.q";
+
+    should Get indices of elements they would appear at in the descending sorted list.
+      expect `0 2 1` from `.list.rankDesc[3 1 2]`.
+        .qu.compare[.list.rankDesc[3 1 2]; 0 2 1]

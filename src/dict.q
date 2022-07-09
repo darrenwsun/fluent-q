@@ -36,4 +36,12 @@
 // - See [`rank`](https://code.kx.com/q/ref/rank/).
 // @param dict {dict} A dictionary.
 // @return {long[]} Indices of values they would appear at in the ascending sorted list.
-.dict.rankAsc:{[vector] rank vector };
+.dict.rankAsc:{[dict] rank dict };
+
+// @kind function
+// @overview Position in the descending sorted dictionary.
+//
+// - See [`rank`](https://code.kx.com/q/ref/rank/).
+// @param dict {dict} A dictionary.
+// @return {long[]} Indices of values they would appear at in the descending sorted list.
+.dict.rankDesc:{[dict] rank neg dict };
