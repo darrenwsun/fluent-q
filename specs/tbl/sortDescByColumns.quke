@@ -1,0 +1,17 @@
+feature Sort table in descending order by given columns.
+
+    before
+      system "l tbl.q";
+
+    should Sort a simple table in descending order by given columns.
+      expect ```([] c1:`b`a; c2:2 1)``` from ```.tbl.sortDescByColumns[([] c1:`a`b; c2:1 2); `c1]```.
+        .qu.compare[
+          .tbl.sortDescByColumns[([] c1:`a`b; c2:1 2); `c1];
+          ([] c1:`b`a; c2:2 1)
+         ]
+
+    should Sort a keyed table in descending order by given columns.
+      expect ```([c1:`b`a] c2:2 1)``` from ```.tbl.sortDescByColumns[([c1:`a`b] c2:1 2); `c2]```.
+        .qu.compare[
+          .tbl.sortDescByColumns[([c1:`a`b] c2:1 2); `c2];
+          ([c1:`b`a] c2:2 1)]

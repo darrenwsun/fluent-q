@@ -427,6 +427,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tblsortdescbycolumns" class="md-nav__link">
+    .tbl.sortDescByColumns
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -476,6 +483,13 @@
         <li class="md-nav__item">
   <a href="#tblsortdesc" class="md-nav__link">
     .tbl.sortDesc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblsortdescbycolumns" class="md-nav__link">
+    .tbl.sortDescByColumns
   </a>
   
 </li>
@@ -609,6 +623,48 @@
 <tr>
 <td>table | keyed table</td>
 <td>The table or keyed table sorted in descending order by the first non-key column.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tblsortdescbycolumns">.tbl.sortDescByColumns<a class="headerlink" href="#tblsortdescbycolumns" title="Permanent link">&para;</a></h2>
+<p>Sort table in descending order by given columns.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/desc/#xdesc"><code>xdesc</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table | symbol</td>
+<td>A table, keyed table, or table name.</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>symbol | symbol[]</td>
+<td>Column name(s) of the table.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table | keyed table | symbol</td>
+<td>The table sorted in descending order by the columns, if the table is passed by value,  otherwise the table name itself where the sorting is in place.</td>
 </tr>
 </tbody>
 </table>

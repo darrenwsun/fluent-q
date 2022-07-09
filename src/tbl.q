@@ -24,3 +24,14 @@
 // @return {table | keyed table | symbol} The table sorted by the columns, if the table is passed by value,
 // otherwise the table name itself where the sorting is in place. The sorted attribute is set on the first column.
 .tbl.sortAscByColumns:{[table;columns] columns xasc table };
+
+// @kind function
+// @overview Sort table in descending order by given columns.
+//
+// - See [`xdesc`](https://code.kx.com/q/ref/desc/#xdesc).
+// @param table {table | keyed table | symbol} A table, keyed table, or table name.
+// @param columns {symbol | symbol[]} Column name(s) of the table.
+// @return {table | keyed table | symbol} The table sorted in descending order by the columns, if the table is passed by value,
+// otherwise the table name itself where the sorting is in place.
+.tbl.sortDescByColumns:{[table;columns] columns xdesc table };
+
