@@ -1,0 +1,10 @@
+feature Distribute evenly.
+
+    before
+      system "l list.q";
+
+    should Get bucket labels each element is assigned to after sorting the list.
+      expect `0 0 1 1 2 2` from `.list.distribute[til 6; 3]`.
+        .qu.compare[.list.distribute[til 6; 3]; 0 0 1 1 2 2]
+      expect `0 0 0 1 1 2 2` from `.list.distribute[til 7; 3]`.
+        .qu.compare[.list.distribute[til 7; 3]; 0 0 0 1 1 2 2]

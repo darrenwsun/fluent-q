@@ -98,3 +98,13 @@
 // @param checkpoints {integer[]} Checkpoints, sorted in ascending order.
 // @return {number[] | temporal[]} A list where each element is rounded down to the nearest checkpoint.
 .list.roundDownByCheckpoints:{[list;checkpoints] checkpoints @ checkpoints bin list};
+
+// @kind function
+// @overview Distribute evenly.
+//
+// @param list {number[] | temporal[]} A numeric or temporal vector.
+// @param bucket {integer} Number of buckets.
+// @return {number[] | temporal[]} Bucket labels each element is assigned to after sorting the list.
+// If the total number of items is evenly divisible by the number of buckets, each bucket will have the same
+// number of items; otherwise the first bucket has more items.
+.list.distribute:{[list;bucket] bucket xrank list};

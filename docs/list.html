@@ -360,6 +360,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listdistribute" class="md-nav__link">
+    .list.distribute
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listrankasc" class="md-nav__link">
     .list.rankAsc
   </a>
@@ -546,6 +553,13 @@
         <li class="md-nav__item">
   <a href="#listbinsearchlast" class="md-nav__link">
     .list.binSearchLast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listdistribute" class="md-nav__link">
+    .list.distribute
   </a>
   
 </li>
@@ -777,6 +791,45 @@
 <tr>
 <td>long</td>
 <td>Index of the last item in the vector whose value is not greater than the target.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listdistribute">.list.distribute<a class="headerlink" href="#listdistribute" title="Permanent link">&para;</a></h2>
+<p>Distribute evenly.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>number[] | temporal[]</td>
+<td>A numeric or temporal vector.</td>
+</tr>
+<tr>
+<td>bucket</td>
+<td>integer</td>
+<td>Number of buckets.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number[] | temporal[]</td>
+<td>Bucket labels each element is assigned to after sorting the list.  If the total number of items is evenly divisible by the number of buckets, each bucket will have the same  number of items; otherwise the first bucket has more items.</td>
 </tr>
 </tbody>
 </table>
