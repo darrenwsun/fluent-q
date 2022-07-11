@@ -81,3 +81,20 @@
 // @param target {*} A value.
 // @return {long} Index of the first item in the vector whose value is not smaller than the target.
 .list.binSearchFirst:{[vector;target] vector binr target };
+
+// @kind function
+// @overview Round down by interval. This function is atomic.
+//
+// - See [`xbar`](https://code.kx.com/q/ref/xbar/).
+// @param list {number[] | temporal[]} A numeric or temporal vector.
+// @param interval {integer} Interval.
+// @return {number[] | temporal[]} A list where each element is rounded down to the nearest multiple of the interval.
+.list.roundDownByInterval:{[list;interval] interval xbar list };
+
+// @kind function
+// @overview Round down by checkpoints.
+//
+// @param list {number[] | temporal[]} A numeric or temporal vector.
+// @param checkpoints {integer[]} Checkpoints, sorted in ascending order.
+// @return {number[] | temporal[]} A list where each element is rounded down to the nearest checkpoint.
+.list.roundDownByCheckpoints:{[list;checkpoints] checkpoints @ checkpoints bin list};

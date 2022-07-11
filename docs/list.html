@@ -381,6 +381,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listrounddownbycheckpoints" class="md-nav__link">
+    .list.roundDownByCheckpoints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listrounddownbyinterval" class="md-nav__link">
+    .list.roundDownByInterval
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listslice" class="md-nav__link">
     .list.slice
   </a>
@@ -553,6 +567,20 @@
         <li class="md-nav__item">
   <a href="#listrepeat" class="md-nav__link">
     .list.repeat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listrounddownbycheckpoints" class="md-nav__link">
+    .list.roundDownByCheckpoints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listrounddownbyinterval" class="md-nav__link">
+    .list.roundDownByInterval
   </a>
   
 </li>
@@ -860,6 +888,87 @@
 <tr>
 <td>list</td>
 <td>A list where the keys are repeated by the corresponding number of times.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listrounddownbycheckpoints">.list.roundDownByCheckpoints<a class="headerlink" href="#listrounddownbycheckpoints" title="Permanent link">&para;</a></h2>
+<p>Round down by checkpoints.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>number[] | temporal[]</td>
+<td>A numeric or temporal vector.</td>
+</tr>
+<tr>
+<td>checkpoints</td>
+<td>integer[]</td>
+<td>Checkpoints, sorted in ascending order.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number[] | temporal[]</td>
+<td>A list where each element is rounded down to the nearest checkpoint.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listrounddownbyinterval">.list.roundDownByInterval<a class="headerlink" href="#listrounddownbyinterval" title="Permanent link">&para;</a></h2>
+<p>Round down by interval. This function is atomic.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/xbar/"><code>xbar</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>number[] | temporal[]</td>
+<td>A numeric or temporal vector.</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>integer</td>
+<td>Interval.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number[] | temporal[]</td>
+<td>A list where each element is rounded down to the nearest multiple of the interval.</td>
 </tr>
 </tbody>
 </table>

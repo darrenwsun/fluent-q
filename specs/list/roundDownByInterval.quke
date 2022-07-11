@@ -1,0 +1,8 @@
+feature Round down by interval.
+
+    before
+      system "l list.q";
+
+    should Get a list where each element is rounded down to the nearest multiple of the interval.
+      expect `0 0 0 3 3 3 6` from `.list.roundDownByInterval[til 7; 3]`.
+        .qu.compare[.list.roundDownByInterval[til 7; 3]; 0 0 0 3 3 3 6]

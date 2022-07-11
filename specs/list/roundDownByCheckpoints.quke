@@ -1,0 +1,8 @@
+feature Round down by checkpoints.
+
+    before
+      system "l list.q";
+
+    should Get a list where each element is rounded down to the nearest checkpoint.
+      expect `0 0 2 2 2 5 5` from `.list.roundDownByCheckpoints[til 7; 0 2 5]`.
+        .qu.compare[.list.roundDownByCheckpoints[til 7; 0 2 5]; 0 0 2 2 2 5 5]
