@@ -1,0 +1,10 @@
+feature Column names of a table.
+
+    before
+      system "l tbl.q";
+
+    should Return column names of a table.
+      expect ````c1`c2``` from ```.tbl.columns[([] c1:(); c2:())]```.
+        .qu.compare[.tbl.columns[([] c1:(); c2:())]; `c1`c2]
+      expect ````c1`c2``` from ```.tbl.columns[([c1:()] c2:())]```.
+        .qu.compare[.tbl.columns[([] c1:(); c2:())]; `c1`c2]

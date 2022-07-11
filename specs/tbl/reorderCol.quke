@@ -1,0 +1,8 @@
+feature Reorder table columns.
+
+    before
+      system "l tbl.q";
+
+    should Return a table where the columns of the specified names appear first.
+      expect `([] c2:(); c1:())` from ```.tbl.reorderCol[([] c1:(); c2:()); enlist`c2]```.
+        .qu.compare[.tbl.renameCol[([] c1:(); c2:()); enlist`c3]; ([] c3:(); c2:())]

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tblsortasc" class="md-skip">
+        <a href="#tblcolumns" class="md-skip">
           Skip to content
         </a>
       
@@ -407,6 +407,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tblcolumns" class="md-nav__link">
+    .tbl.columns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblrenamecol" class="md-nav__link">
+    .tbl.renameCol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblreordercol" class="md-nav__link">
+    .tbl.reorderCol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tblsortasc" class="md-nav__link">
     .tbl.sortAsc
   </a>
@@ -467,6 +488,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#tblcolumns" class="md-nav__link">
+    .tbl.columns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblrenamecol" class="md-nav__link">
+    .tbl.renameCol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblreordercol" class="md-nav__link">
+    .tbl.reorderCol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tblsortasc" class="md-nav__link">
     .tbl.sortAsc
   </a>
@@ -510,6 +552,127 @@
 
   <h1>tbl</h1>
 
+<h2 id="tblcolumns">.tbl.columns<a class="headerlink" href="#tblcolumns" title="Permanent link">&para;</a></h2>
+<p>Column names of a table.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/cols/#cols"><code>cols</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table | symbol</td>
+<td>A table or a table name or a file symbol for a splayed table.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol[]</td>
+<td>Column names of the table.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tblrenamecol">.tbl.renameCol<a class="headerlink" href="#tblrenamecol" title="Permanent link">&para;</a></h2>
+<p>Rename table columns.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/cols/#xcol"><code>xcol</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table</td>
+<td>A table.</td>
+</tr>
+<tr>
+<td>names</td>
+<td>symbol[] | dict</td>
+<td>New column names, or a full mapping between old and new column names.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table | keyed table</td>
+<td>Table with column renamed. If <code>names</code> is a symbol vector of length no greater than the number of  columns in the table, the first <code>count names</code> columns are renamed. If <code>names</code> is a dictionary, the columns  are renamed according to the mapping.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tblreordercol">.tbl.reorderCol<a class="headerlink" href="#tblreordercol" title="Permanent link">&para;</a></h2>
+<p>Reorder table columns.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/cols/#xcols"><code>xcols</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table</td>
+<td>A non-keyed table.</td>
+</tr>
+<tr>
+<td>names</td>
+<td>symbol[]</td>
+<td>Some or all of the table's column names.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>The table where the columns of the specified names appear first.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="tblsortasc">.tbl.sortAsc<a class="headerlink" href="#tblsortasc" title="Permanent link">&para;</a></h2>
 <p>Sort table in ascending order by first non-key column.</p>
 <ul>

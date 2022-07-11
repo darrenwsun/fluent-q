@@ -1,4 +1,32 @@
 // @kind function
+// @overview Column names of a table.
+//
+// - See [`cols`](https://code.kx.com/q/ref/cols/#cols).
+// @param table {table | keyed table | symbol} A table or a table name or a file symbol for a splayed table.
+// @return {symbol[]} Column names of the table.
+.tbl.columns:{[table] cols table };
+
+// @kind function
+// @overview Rename table columns.
+//
+// - See [`xcol`](https://code.kx.com/q/ref/cols/#xcol).
+// @param table {table | keyed table} A table.
+// @param names {symbol[] | dict} New column names, or a full mapping between old and new column names.
+// @return {table | keyed table} Table with column renamed. If `names` is a symbol vector of length no greater than the number of
+// columns in the table, the first `count names` columns are renamed. If `names` is a dictionary, the columns
+// are renamed according to the mapping.
+.tbl.renameCol:{[table;names] names xcol table };
+
+// @kind function
+// @overview Reorder table columns.
+//
+// - See [`xcols`](https://code.kx.com/q/ref/cols/#xcols).
+// @param table {table} A non-keyed table.
+// @param names {symbol[]} Some or all of the table's column names.
+// @return {table} The table where the columns of the specified names appear first.
+.tbl.reorderCol:{[table;names] names xcols table };
+
+// @kind function
 // @overview Sort table in ascending order by first non-key column.
 //
 // - See [`asc`](https://code.kx.com/q/ref/asc/#table).
