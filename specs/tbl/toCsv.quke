@@ -1,0 +1,12 @@
+feature Convert table to CSV format.
+
+    before
+      system "l tbl.q";
+
+    should Return CSV format of the table.
+
+      expect ```("c1,c2";"a,1";"b,2")``` from ```.tbl.toCsv[([] c1:`a`b; c2:1 2)]```.
+        .qu.compare[.tbl.toCsv[([] c1:`a`b; c2:1 2)]; ("c1,c2";"a,1";"b,2")]
+
+      expect ```("c1,c2";"a,1";"b,2")``` from ```.tbl.toCsv[([c1:`a`b] c2:1 2)]```.
+        .qu.compare[.tbl.toCsv[([c1:`a`b] c2:1 2)]; ("c1,c2";"a,1";"b,2")]

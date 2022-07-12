@@ -63,3 +63,11 @@
 // otherwise the table name itself where the sorting is in place.
 .tbl.sortDescByColumns:{[table;columns] columns xdesc table };
 
+// @kind function
+// @overview Convert table to CSV format.
+//
+// - See [`0: File Text`](https://code.kx.com/q/ref/file-text/#prepare-text).
+// @param table {table | keyed table} A table, keyed or non-keyed.
+// @return {string[]} CSV format of the table.
+.tbl.toCsv:{[table] csv 0: table };
+

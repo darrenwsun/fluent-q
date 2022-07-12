@@ -455,6 +455,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tbltocsv" class="md-nav__link">
+    .tbl.toCsv
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -532,6 +539,13 @@
         <li class="md-nav__item">
   <a href="#tblsortdescbycolumns" class="md-nav__link">
     .tbl.sortDescByColumns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tbltocsv" class="md-nav__link">
+    .tbl.toCsv
   </a>
   
 </li>
@@ -828,6 +842,43 @@
 <tr>
 <td>table | keyed table | symbol</td>
 <td>The table sorted in descending order by the columns, if the table is passed by value,  otherwise the table name itself where the sorting is in place.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tbltocsv">.tbl.toCsv<a class="headerlink" href="#tbltocsv" title="Permanent link">&para;</a></h2>
+<p>Convert table to CSV format.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/file-text/#prepare-text"><code>0: File Text</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table</td>
+<td>A table, keyed or non-keyed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string[]</td>
+<td>CSV format of the table.</td>
 </tr>
 </tbody>
 </table>
