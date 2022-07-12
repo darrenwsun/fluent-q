@@ -27,12 +27,29 @@
 .tbl.reorderCol:{[table;names] names xcols table };
 
 // @kind function
-// @overview Key column(s).
+// @overview A table composed of key column(s).
 //
 // - See [`key`](https://code.kx.com/q/ref/key/#keys-of-a-keyed-table).
 // @param table {keyed table | symbol} A keyed table, or name of a keyed table.
-// @return {table} A table containing key column(s).
+// @return {table} A table composed of key column(s).
 .tbl.keys:{[table] key table };
+
+// @kind function
+// @overview Get key column(s).
+//
+// - See [`keys`](https://code.kx.com/q/ref/keys/#keys).
+// @param table {table | keyed table | symbol} A keyed/unkeyed table, or a table name.
+// @return {symbol[]} Key columns of the table if it's keyed, otherwise empty symbol vector.
+.tbl.getKey:{[table] keys table };
+
+// @kind function
+// @overview Set key column(s).
+//
+// - See [`xkey`](https://code.kx.com/q/ref/keys/#xkey).
+// @param table {table | keyed table | symbol} A keyed/unkeyed table, or a table name.
+// @param keyCols {symbol | symbol[]} Some column names of the table.
+// @return {keyed table | symbol} A keyed table, or the same name, whose keys are specified by `keyCols`.
+.tbl.setKey:{[table;keyCols] keyCols xkey table };
 
 // @kind function
 // @overview Foreign-key columns of a table.

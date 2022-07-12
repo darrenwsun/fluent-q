@@ -421,6 +421,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tblgetkey" class="md-nav__link">
+    .tbl.getKey
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tblkeys" class="md-nav__link">
     .tbl.keys
   </a>
@@ -437,6 +444,13 @@
         <li class="md-nav__item">
   <a href="#tblreordercol" class="md-nav__link">
     .tbl.reorderCol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblsetkey" class="md-nav__link">
+    .tbl.setKey
   </a>
   
 </li>
@@ -538,6 +552,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tblgetkey" class="md-nav__link">
+    .tbl.getKey
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tblkeys" class="md-nav__link">
     .tbl.keys
   </a>
@@ -554,6 +575,13 @@
         <li class="md-nav__item">
   <a href="#tblreordercol" class="md-nav__link">
     .tbl.reorderCol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblsetkey" class="md-nav__link">
+    .tbl.setKey
   </a>
   
 </li>
@@ -683,8 +711,45 @@
 </tr>
 </tbody>
 </table>
+<h2 id="tblgetkey">.tbl.getKey<a class="headerlink" href="#tblgetkey" title="Permanent link">&para;</a></h2>
+<p>Get key column(s).</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/keys/#keys"><code>keys</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table | symbol</td>
+<td>A keyed/unkeyed table, or a table name.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol[]</td>
+<td>Key columns of the table if it's keyed, otherwise empty symbol vector.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="tblkeys">.tbl.keys<a class="headerlink" href="#tblkeys" title="Permanent link">&para;</a></h2>
-<p>Key column(s).</p>
+<p>A table composed of key column(s).</p>
 <ul>
 <li>See <a href="https://code.kx.com/q/ref/key/#keys-of-a-keyed-table"><code>key</code></a>.</li>
 </ul>
@@ -716,7 +781,7 @@
 <tbody>
 <tr>
 <td>table</td>
-<td>A table containing key column(s).</td>
+<td>A table composed of key column(s).</td>
 </tr>
 </tbody>
 </table>
@@ -801,6 +866,48 @@
 <tr>
 <td>table</td>
 <td>The table where the columns of the specified names appear first.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tblsetkey">.tbl.setKey<a class="headerlink" href="#tblsetkey" title="Permanent link">&para;</a></h2>
+<p>Set key column(s).</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/keys/#xkey"><code>xkey</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table | symbol</td>
+<td>A keyed/unkeyed table, or a table name.</td>
+</tr>
+<tr>
+<td>keyCols</td>
+<td>symbol | symbol[]</td>
+<td>Some column names of the table.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyed table | symbol</td>
+<td>A keyed table, or the same name, whose keys are specified by <code>keyCols</code>.</td>
 </tr>
 </tbody>
 </table>
