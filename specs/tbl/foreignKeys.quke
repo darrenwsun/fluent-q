@@ -1,0 +1,11 @@
+feature Foreign-key columns of a table.
+
+    before
+      system "l tbl.q";
+
+    should return a dictionary that maps foreign-key columns to their tables.
+
+      expect a dictionary that maps foreign-key columns to their tables.
+        `f set ([x:1 2 3]y:10 20 30);
+        t:([]a:`f$2 2 2;b:0;c:`f$1 1 1);
+        .qu.compare[.tbl.foreignKeys t; `a`c!`f`f]

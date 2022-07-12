@@ -27,6 +27,14 @@
 .tbl.reorderCol:{[table;names] names xcols table };
 
 // @kind function
+// @overview Foreign-key columns of a table.
+//
+// - See [`fkeys`](https://code.kx.com/q/ref/fkeys/).
+// @param table {table | keyed table} A table, keyed or non-keyed.
+// @return {dict} A dictionary that maps foreign-key columns to their tables.
+.tbl.foreignKeys:{[table] fkeys table };
+
+// @kind function
 // @overview Sort table in ascending order by first non-key column.
 //
 // - See [`asc`](https://code.kx.com/q/ref/asc/#table).
