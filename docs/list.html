@@ -367,6 +367,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listenumsource" class="md-nav__link">
+    .list.enumSource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listrankasc" class="md-nav__link">
     .list.rankAsc
   </a>
@@ -418,6 +425,13 @@
         <li class="md-nav__item">
   <a href="#listsortdesc" class="md-nav__link">
     .list.sortDesc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listtype" class="md-nav__link">
+    .list.type
   </a>
   
 </li>
@@ -505,6 +519,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="util.html" class="md-nav__link">
+        util
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -565,6 +594,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listenumsource" class="md-nav__link">
+    .list.enumSource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listrankasc" class="md-nav__link">
     .list.rankAsc
   </a>
@@ -616,6 +652,13 @@
         <li class="md-nav__item">
   <a href="#listsortdesc" class="md-nav__link">
     .list.sortDesc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listtype" class="md-nav__link">
+    .list.type
   </a>
   
 </li>
@@ -830,6 +873,40 @@
 <tr>
 <td>number[] | temporal[]</td>
 <td>Bucket labels each element is assigned to after sorting the list.  If the total number of items is evenly divisible by the number of buckets, each bucket will have the same  number of items; otherwise the first bucket has more items.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listenumsource">.list.enumSource<a class="headerlink" href="#listenumsource" title="Permanent link">&para;</a></h2>
+<p>Enumeration source.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>*[]</td>
+<td>An enumerated list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>Name of the variable by which the list is enumerated.</td>
 </tr>
 </tbody>
 </table>
@@ -1143,6 +1220,40 @@
 <tr>
 <td>*[]</td>
 <td>A vector of the same items but sorted in descending order of value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listtype">.list.type<a class="headerlink" href="#listtype" title="Permanent link">&para;</a></h2>
+<p>Vector data type.</p>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>symbol</td>
+<td>Data type of the vector.</td>
 </tr>
 </tbody>
 </table>

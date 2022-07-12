@@ -1,4 +1,12 @@
 // @kind function
+// @overview Key of a dictionary.
+//
+// - See [`key`](https://code.kx.com/q/ref/key/#key-of-a-dictionary).
+// @param dict {dict | symbol} A dictionary, or name of a dictionary.
+// @return {*[]} key of the dictionary.
+.dict.key:{[dict] key dict };
+
+// @kind function
 // @overview Sort dictionary value in ascending order of value.
 //
 // - See [`asc`](https://code.kx.com/q/ref/asc/#asc).

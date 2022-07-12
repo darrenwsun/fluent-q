@@ -27,6 +27,14 @@
 .tbl.reorderCol:{[table;names] names xcols table };
 
 // @kind function
+// @overview Key column(s).
+//
+// - See [`key`](https://code.kx.com/q/ref/key/#keys-of-a-keyed-table).
+// @param table {keyed table | symbol} A keyed table, or name of a keyed table.
+// @return {table} A table containing key column(s).
+.tbl.keys:{[table] key table };
+
+// @kind function
 // @overview Foreign-key columns of a table.
 //
 // - See [`fkeys`](https://code.kx.com/q/ref/fkeys/).

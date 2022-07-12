@@ -1,4 +1,11 @@
 // @kind function
+// @overview Vector data type.
+//
+// @param vector {*[]} A vector.
+// @return {symbol} Data type of the vector.
+.list.type:{[list] key list};
+
+// @kind function
 // @overview Slice of a list.
 //
 // - See [`sublist`](https://code.kx.com/q/ref/sublist/#slice).
@@ -108,3 +115,10 @@
 // If the total number of items is evenly divisible by the number of buckets, each bucket will have the same
 // number of items; otherwise the first bucket has more items.
 .list.distribute:{[list;bucket] bucket xrank list};
+
+// @kind function
+// @overview Enumeration source.
+//
+// @param list {*[]} An enumerated list.
+// @return {symbol} Name of the variable by which the list is enumerated.
+.list.enumSource:{[list] key list};
