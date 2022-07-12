@@ -1,4 +1,12 @@
 // @kind function
+// @overview Metadata for a table.
+//
+// - See [`meta`](https://code.kx.com/q/ref/meta/).
+// @param table {table | keyed table | symbol} A table or a table name or a file symbol for a splayed table.
+// @return {symbol[]} Metadata of the table.
+.tbl.meta:{[table] meta table };
+
+// @kind function
 // @overview Column names of a table.
 //
 // - See [`cols`](https://code.kx.com/q/ref/cols/#cols).
@@ -103,4 +111,13 @@
 // @param table {table | keyed table} A table, keyed or non-keyed.
 // @return {string[]} CSV format of the table.
 .tbl.toCsv:{[table] csv 0: table };
+
+// @kind function
+// @overview Ungroup.
+//
+// - See [`ungroup`](https://code.kx.com/q/ref/ungroup/).
+// @param table {table | keyed table} A table, keyed or non-keyed. Some cells are lists, and for any row, all lists
+// are of equal length.
+// @return {table} A normalized table with one row for each item of the lists.
+.tbl.ungroup:{[table] ungroup table };
 
