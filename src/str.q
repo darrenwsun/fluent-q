@@ -1,4 +1,20 @@
 // @kind function
+// @overview To lowercase. This function is atomic.
+//
+// - See [`lower`](https://code.kx.com/q/ref/lower/).
+// @param x {char | symbol} A character, symbol, or a vector of either.
+// @return {char | symbol} Lowercase representation of the input.
+.str.lower:{ lower x };
+
+// @kind function
+// @overview To uppercase. This function is atomic.
+//
+// - See [`upper`](https://code.kx.com/q/ref/lower/).
+// @param x {char | symbol} A character, symbol, or a vector of either.
+// @return {char | symbol} Uppercase representation of the input.
+.str.upper:{ upper x };
+
+// @kind function
 // @overview String join.
 //
 // - See [`sv`](https://code.kx.com/q/ref/sv/#strings).

@@ -374,6 +374,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listltrim" class="md-nav__link">
+    .list.ltrim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listrankasc" class="md-nav__link">
     .list.rankAsc
   </a>
@@ -409,6 +416,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listrtrim" class="md-nav__link">
+    .list.rtrim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listslice" class="md-nav__link">
     .list.slice
   </a>
@@ -425,6 +439,13 @@
         <li class="md-nav__item">
   <a href="#listsortdesc" class="md-nav__link">
     .list.sortDesc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listtrim" class="md-nav__link">
+    .list.trim
   </a>
   
 </li>
@@ -601,6 +622,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listltrim" class="md-nav__link">
+    .list.ltrim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listrankasc" class="md-nav__link">
     .list.rankAsc
   </a>
@@ -636,6 +664,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#listrtrim" class="md-nav__link">
+    .list.rtrim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listslice" class="md-nav__link">
     .list.slice
   </a>
@@ -652,6 +687,13 @@
         <li class="md-nav__item">
   <a href="#listsortdesc" class="md-nav__link">
     .list.sortDesc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listtrim" class="md-nav__link">
+    .list.trim
   </a>
   
 </li>
@@ -910,6 +952,44 @@
 </tr>
 </tbody>
 </table>
+<h2 id="listltrim">.list.ltrim<a class="headerlink" href="#listltrim" title="Permanent link">&para;</a></h2>
+<p>Remove leading nulls.
+This function is <a href="https://code.kx.com/q/basics/atomic/#string-atomic">string-atomic</a>.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/trim/"><code>ltrim</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vector</td>
+<td>*[]</td>
+<td>A vector.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*[]</td>
+<td>The vector with leading nulls removed.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="listrankasc">.list.rankAsc<a class="headerlink" href="#listrankasc" title="Permanent link">&para;</a></h2>
 <p>Position in the ascending sorted list.</p>
 <ul>
@@ -1102,6 +1182,44 @@
 </tr>
 </tbody>
 </table>
+<h2 id="listrtrim">.list.rtrim<a class="headerlink" href="#listrtrim" title="Permanent link">&para;</a></h2>
+<p>Remove trailing nulls.
+This function is <a href="https://code.kx.com/q/basics/atomic/#string-atomic">string-atomic</a>.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/trim/"><code>rtrim</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vector</td>
+<td>*[]</td>
+<td>A vector.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*[]</td>
+<td>The vector with trailing nulls removed.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="listslice">.list.slice<a class="headerlink" href="#listslice" title="Permanent link">&para;</a></h2>
 <p>Slice of a list.</p>
 <ul>
@@ -1220,6 +1338,44 @@
 <tr>
 <td>*[]</td>
 <td>A vector of the same items but sorted in descending order of value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listtrim">.list.trim<a class="headerlink" href="#listtrim" title="Permanent link">&para;</a></h2>
+<p>Remove leading or trailing nulls.
+This function is <a href="https://code.kx.com/q/basics/atomic/#string-atomic">string-atomic</a>.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/trim/"><code>trim</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vector</td>
+<td>*[]</td>
+<td>A vector.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*[]</td>
+<td>The vector with leading and trailing nulls removed.</td>
 </tr>
 </tbody>
 </table>

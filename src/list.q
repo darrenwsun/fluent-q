@@ -16,6 +16,33 @@
 .list.slice:{[list;pos;len] (pos; len) sublist list };
 
 // @kind function
+// @overview Remove leading or trailing nulls.
+// This function is [string-atomic](https://code.kx.com/q/basics/atomic/#string-atomic).
+//
+// - See [`trim`](https://code.kx.com/q/ref/trim/).
+// @param vector {*[]} A vector.
+// @return {*[]} The vector with leading and trailing nulls removed.
+.list.trim:{[vector] trim vector };
+
+// @kind function
+// @overview Remove leading nulls.
+// This function is [string-atomic](https://code.kx.com/q/basics/atomic/#string-atomic).
+//
+// - See [`ltrim`](https://code.kx.com/q/ref/trim/).
+// @param vector {*[]} A vector.
+// @return {*[]} The vector with leading nulls removed.
+.list.ltrim:{[vector] ltrim vector };
+
+// @kind function
+// @overview Remove trailing nulls.
+// This function is [string-atomic](https://code.kx.com/q/basics/atomic/#string-atomic).
+//
+// - See [`rtrim`](https://code.kx.com/q/ref/trim/).
+// @param vector {*[]} A vector.
+// @return {*[]} The vector with trailing nulls removed.
+.list.rtrim:{[vector] rtrim vector };
+
+// @kind function
 // @overview Repeat.
 //
 // - See [`where`](https://code.kx.com/q/ref/where/#dictionary-whose-values-are-non-negative-integers).
