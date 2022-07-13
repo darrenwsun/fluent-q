@@ -428,6 +428,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tblgroup" class="md-nav__link">
+    .tbl.group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tblkeys" class="md-nav__link">
     .tbl.keys
   </a>
@@ -568,6 +575,13 @@
         <li class="md-nav__item">
   <a href="#tblgetkey" class="md-nav__link">
     .tbl.getKey
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblgroup" class="md-nav__link">
+    .tbl.group
   </a>
   
 </li>
@@ -773,6 +787,48 @@
 <tr>
 <td>symbol[]</td>
 <td>Key columns of the table if it's keyed, otherwise empty symbol vector.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tblgroup">.tbl.group<a class="headerlink" href="#tblgroup" title="Permanent link">&para;</a></h2>
+<p>Group.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/xgroup/"><code>xgroup</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>table | keyed table</td>
+<td>A table, keyed or non-keyed.</td>
+</tr>
+<tr>
+<td>groupBy</td>
+<td>symbol | symbol[]</td>
+<td>Some column names of the table to group by.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyed table</td>
+<td>A table grouped by the given columns.</td>
 </tr>
 </tbody>
 </table>

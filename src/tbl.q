@@ -113,6 +113,15 @@
 .tbl.toCsv:{[table] csv 0: table };
 
 // @kind function
+// @overview Group.
+//
+// - See [`xgroup`](https://code.kx.com/q/ref/xgroup/).
+// @param table {table | keyed table} A table, keyed or non-keyed.
+// @param groupBy {symbol | symbol[]} Some column names of the table to group by.
+// @return {keyed table} A table grouped by the given columns.
+.tbl.group:{[table;groupBy] groupBy xgroup table };
+
+// @kind function
 // @overview Ungroup.
 //
 // - See [`ungroup`](https://code.kx.com/q/ref/ungroup/).
