@@ -413,6 +413,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#strmd5" class="md-nav__link">
+    .str.md5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strreplace" class="md-nav__link">
+    .str.replace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strsearch" class="md-nav__link">
+    .str.search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#strsplit" class="md-nav__link">
     .str.split
   </a>
@@ -512,6 +533,27 @@
         <li class="md-nav__item">
   <a href="#strlower" class="md-nav__link">
     .str.lower
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strmd5" class="md-nav__link">
+    .str.md5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strreplace" class="md-nav__link">
+    .str.replace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strsearch" class="md-nav__link">
+    .str.search
   </a>
   
 </li>
@@ -666,6 +708,132 @@
 <tr>
 <td>char | symbol</td>
 <td>Lowercase representation of the input.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="strmd5">.str.md5<a class="headerlink" href="#strmd5" title="Permanent link">&para;</a></h2>
+<p>MD5 hash.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/md5/"><code>md5</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>string</td>
+<td>A string.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>MD5 hash.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="strreplace">.str.replace<a class="headerlink" href="#strreplace" title="Permanent link">&para;</a></h2>
+<p>Replace.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/ss/#ssr"><code>ssr</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>string</td>
+<td>A string.</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>string</td>
+<td>A string for pattern.</td>
+</tr>
+<tr>
+<td>replacement</td>
+<td>string | fn</td>
+<td>A string, or a function that produce a new string when called with each  matched substring.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>A new string with each matched substring replaced.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="strsearch">.str.search<a class="headerlink" href="#strsearch" title="Permanent link">&para;</a></h2>
+<p>Search.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/ss/#ss"><code>ss</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>str</td>
+<td>string</td>
+<td>A string.</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>string</td>
+<td>A string for pattern.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>long[]</td>
+<td>Indices at which the substrings match the pattern.</td>
 </tr>
 </tbody>
 </table>

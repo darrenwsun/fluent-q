@@ -47,3 +47,31 @@
 // @param str {string} A string.
 // @return {string[]} A list of strings split by line break. It works for both Unix- and Windows-style line breaks.
 .str.splitByLineBreak:{[str] ` vs str };
+
+// @kind function
+// @overview Search.
+//
+// - See [`ss`](https://code.kx.com/q/ref/ss/#ss).
+// @param str {string} A string.
+// @param pattern {string} A string for pattern.
+// @return {long[]} Indices at which the substrings match the pattern.
+.str.search:{[str;pattern] str ss pattern };
+
+// @kind function
+// @overview Replace.
+//
+// - See [`ssr`](https://code.kx.com/q/ref/ss/#ssr).
+// @param str {string} A string.
+// @param pattern {string} A string for pattern.
+// @param replacement {string | function} A string, or a function that produce a new string when called with each
+// matched substring.
+// @return {string} A new string with each matched substring replaced.
+.str.replace:{[str;pattern;replacement] ssr[str; pattern; replacement] };
+
+// @kind function
+// @overview MD5 hash.
+//
+// - See [`md5`](https://code.kx.com/q/ref/md5/).
+// @param str {string} A string.
+// @return {string} MD5 hash.
+.str.md5:{[str] raze string md5 str };
