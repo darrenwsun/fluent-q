@@ -428,6 +428,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#utiltrap" class="md-nav__link">
+    .util.trap
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -463,6 +470,13 @@
         <li class="md-nav__item">
   <a href="#utildefined" class="md-nav__link">
     .util.defined
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utiltrap" class="md-nav__link">
+    .util.trap
   </a>
   
 </li>
@@ -517,6 +531,53 @@
 <tr>
 <td>table</td>
 <td><code>1b</code> if the name is already defined, <code>0b</code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="utiltrap">.util.trap<a class="headerlink" href="#utiltrap" title="Permanent link">&para;</a></h2>
+<p>Trap.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/apply/#trap"><code>Trap</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>func</td>
+<td>fn</td>
+<td>A function.</td>
+</tr>
+<tr>
+<td>param</td>
+<td>*</td>
+<td>Parameter(s) to the function.</td>
+</tr>
+<tr>
+<td>expr</td>
+<td>*</td>
+<td>An expression or a unary function.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>The result of evaluating the function with the parameter, if no error occurs.  When there is an error, if <code>expr</code> is an expression, the expression is evaluated and returned;  if <code>expr</code> is a function, it's evaluated given the error as the input.</td>
 </tr>
 </tbody>
 </table>
