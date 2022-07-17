@@ -149,3 +149,32 @@
 // @param list {*[]} An enumerated list.
 // @return {symbol} Name of the variable by which the list is enumerated.
 .list.enumSource:{[list] key list};
+
+// @kind function
+// @overview Apply unary.
+//
+// @param list {*[] | symbol} An list, or a name to a list, or a file symbol.
+// @param index {integer[]} Index of some element.
+// @param func {function} A unary function to apply to the element at the index.
+// @return {*[] | symbol} The list or its name with the given function applied to the element at the given index.
+.list.applyUnary:{[list;index;func] .[list; (),index; func] };
+
+// @kind function
+// @overview Apply binary.
+//
+// @param list {*[] | symbol} An list, or a name to a list.
+// @param index {integer[]} Index of some element.
+// @param func {function} A binary function to apply to the element at the index.
+// @param val {*} Value to be used as the second argument to the function.
+// @return {*[] | symbol} The list or its name with the given function applied to the element at the given index
+// and the value.
+.list.applyBinary:{[list;index;func;val] .[list; (),index; func; val] };
+
+// @kind function
+// @overview Amend.
+//
+// @param list {*[] | symbol} An list, or a name to a list.
+// @param index {integer[]} Index to amend at.
+// @param val {*} Value for the amendment.
+// @return {*[] | symbol} Name of the variable by which the list is enumerated.
+.list.amend:{[list;index;val] .[list; (),index; :; val] };

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#listargsortasc" class="md-skip">
+        <a href="#listamend" class="md-skip">
           Skip to content
         </a>
       
@@ -332,6 +332,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#listamend" class="md-nav__link">
+    .list.amend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listapplybinary" class="md-nav__link">
+    .list.applyBinary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listapplyunary" class="md-nav__link">
+    .list.applyUnary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listargsortasc" class="md-nav__link">
     .list.argSortAsc
   </a>
@@ -580,6 +601,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#listamend" class="md-nav__link">
+    .list.amend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listapplybinary" class="md-nav__link">
+    .list.applyBinary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listapplyunary" class="md-nav__link">
+    .list.applyUnary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listargsortasc" class="md-nav__link">
     .list.argSortAsc
   </a>
@@ -721,6 +763,143 @@
 
   <h1>list</h1>
 
+<h2 id="listamend">.list.amend<a class="headerlink" href="#listamend" title="Permanent link">&para;</a></h2>
+<p>Amend.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>*[] | symbol</td>
+<td>An list, or a name to a list.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer[]</td>
+<td>Index to amend at.</td>
+</tr>
+<tr>
+<td>val</td>
+<td>*</td>
+<td>Value for the amendment.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*[] | symbol</td>
+<td>Name of the variable by which the list is enumerated.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listapplybinary">.list.applyBinary<a class="headerlink" href="#listapplybinary" title="Permanent link">&para;</a></h2>
+<p>Apply binary.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>*[] | symbol</td>
+<td>An list, or a name to a list.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer[]</td>
+<td>Index of some element.</td>
+</tr>
+<tr>
+<td>func</td>
+<td>fn</td>
+<td>A binary function to apply to the element at the index.</td>
+</tr>
+<tr>
+<td>val</td>
+<td>*</td>
+<td>Value to be used as the second argument to the function.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*[] | symbol</td>
+<td>The list or its name with the given function applied to the element at the given index  and the value.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="listapplyunary">.list.applyUnary<a class="headerlink" href="#listapplyunary" title="Permanent link">&para;</a></h2>
+<p>Apply unary.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>*[] | symbol</td>
+<td>An list, or a name to a list, or a file symbol.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer[]</td>
+<td>Index of some element.</td>
+</tr>
+<tr>
+<td>func</td>
+<td>fn</td>
+<td>A unary function to apply to the element at the index.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*[] | symbol</td>
+<td>The list or its name with the given function applied to the element at the given index.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="listargsortasc">.list.argSortAsc<a class="headerlink" href="#listargsortasc" title="Permanent link">&para;</a></h2>
 <p>Indices for ascending sort.</p>
 <ul>
