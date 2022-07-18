@@ -17,3 +17,13 @@
 // When there is an error, if `expr` is an expression, the expression is evaluated and returned;
 // if `expr` is a function, it's evaluated given the error as the input.
 .util.trap:{[func;param;expr] .[func; (),param; expr] };
+
+// @kind function
+// @overview Converge.
+//
+// - See [`Converge`](https://code.kx.com/q/ref/accumulators/#converge).
+// @param func {function | list | dict} A unary function, or a list, or a dictionary.
+// @param param {*} Parameter to the function, or index of the list, or keys of the dictionary.
+// @return {*} `param` and successive evaluations by `func`, until two successive evaluations match or an evaluation
+// matches `param`.
+.util.converge:{[func;param] (func\) param };
