@@ -27,3 +27,23 @@
 // @return {*} `param` and successive evaluations by `func`, until two successive evaluations match or an evaluation
 // matches `param`.
 .util.converge:{[func;param] (func\) param };
+
+// @kind function
+// @overview Over unary.
+//
+// - See [`Over`](https://code.kx.com/q/ref/accumulators/#unary-application).
+// @param func {function} A binary function.
+// @param list {*[]} A list.
+// @return {*[]} A list of results by successively apply the function to the elements in the list.
+.util.overUnary:{[func;list] (func\) list };
+
+// @kind function
+// @overview Over binary.
+//
+// - See [`Over`](https://code.kx.com/q/ref/accumulators/#binary-application).
+// @param func {function} A binary function.
+// @param start {*} A value.
+// @param list {*[]} A list.
+// @return {*[]} A list of results by successively apply the function to the elements in the list. The first iteration
+// uses `start` and the first element of the list.
+.util.overBinary:{[func;start;list] (func\)[start;list] };
