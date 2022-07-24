@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#utilconverge" class="md-skip">
+        <a href="#utildefined" class="md-skip">
           Skip to content
         </a>
       
@@ -287,6 +287,21 @@
   
   
     <li class="md-nav__item">
+      <a href="func.html" class="md-nav__link">
+        func
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="io.html" class="md-nav__link">
         io
       </a>
@@ -422,36 +437,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#utilconverge" class="md-nav__link">
-    .util.converge
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#utildefined" class="md-nav__link">
     .util.defined
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiloverbinary" class="md-nav__link">
-    .util.overBinary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiloverternary" class="md-nav__link">
-    .util.overTernary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiloverunary" class="md-nav__link">
-    .util.overUnary
   </a>
   
 </li>
@@ -496,36 +483,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#utilconverge" class="md-nav__link">
-    .util.converge
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#utildefined" class="md-nav__link">
     .util.defined
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiloverbinary" class="md-nav__link">
-    .util.overBinary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiloverternary" class="md-nav__link">
-    .util.overTernary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#utiloverunary" class="md-nav__link">
-    .util.overUnary
   </a>
   
 </li>
@@ -553,48 +512,6 @@
 
   <h1>util</h1>
 
-<h2 id="utilconverge">.util.converge<a class="headerlink" href="#utilconverge" title="Permanent link">&para;</a></h2>
-<p>Converge.</p>
-<ul>
-<li>See <a href="https://code.kx.com/q/ref/accumulators/#converge"><code>Converge</code></a>.</li>
-</ul>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>func</td>
-<td>function | list | dict</td>
-<td>A unary function, or a list, or a dictionary.</td>
-</tr>
-<tr>
-<td>param</td>
-<td>*</td>
-<td>Parameter to the function, or index of the list, or keys of the dictionary.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*</td>
-<td><code>param</code> and successive evaluations by <code>func</code>, until two successive evaluations match or an evaluation  matches <code>param</code>.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="utildefined">.util.defined<a class="headerlink" href="#utildefined" title="Permanent link">&para;</a></h2>
 <p>Whether a name is defined.</p>
 <ul>
@@ -629,147 +546,6 @@
 <tr>
 <td>table</td>
 <td><code>1b</code> if the name is already defined, <code>0b</code> otherwise.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="utiloverbinary">.util.overBinary<a class="headerlink" href="#utiloverbinary" title="Permanent link">&para;</a></h2>
-<p>Over binary.</p>
-<ul>
-<li>See <a href="https://code.kx.com/q/ref/accumulators/#binary-application"><code>Over</code></a>.</li>
-</ul>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>func</td>
-<td>fn</td>
-<td>A binary function.</td>
-</tr>
-<tr>
-<td>start</td>
-<td>*</td>
-<td>A value.</td>
-</tr>
-<tr>
-<td>list</td>
-<td>*[]</td>
-<td>A list.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*[]</td>
-<td>A list of results by successively apply the function to the elements in the list. The first iteration  uses <code>start</code> and the first element of the list.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="utiloverternary">.util.overTernary<a class="headerlink" href="#utiloverternary" title="Permanent link">&para;</a></h2>
-<p>Over ternary.</p>
-<ul>
-<li>See <a href="https://code.kx.com/q/ref/accumulators/#ternary-values"><code>Over</code></a>.</li>
-</ul>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>func</td>
-<td>fn</td>
-<td>A binary function.</td>
-</tr>
-<tr>
-<td>start</td>
-<td>*</td>
-<td>A value.</td>
-</tr>
-<tr>
-<td>list1</td>
-<td>*[]</td>
-<td>A list.</td>
-</tr>
-<tr>
-<td>list2</td>
-<td>*[]</td>
-<td>A list.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*[]</td>
-<td>A list of results by successively apply the function to the elements in the list. The first iteration  uses <code>start</code>, the first element of <code>list1</code>, and the first element of <code>list2</code>.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="utiloverunary">.util.overUnary<a class="headerlink" href="#utiloverunary" title="Permanent link">&para;</a></h2>
-<p>Over unary.</p>
-<ul>
-<li>See <a href="https://code.kx.com/q/ref/accumulators/#unary-application"><code>Over</code></a>.</li>
-</ul>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>func</td>
-<td>fn</td>
-<td>A binary function.</td>
-</tr>
-<tr>
-<td>list</td>
-<td>*[]</td>
-<td>A list.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>*[]</td>
-<td>A list of results by successively apply the function to the elements in the list.</td>
 </tr>
 </tbody>
 </table>
