@@ -47,3 +47,15 @@
 // @return {*[]} A list of results by successively apply the function to the elements in the list. The first iteration
 // uses `start` and the first element of the list.
 .util.overBinary:{[func;start;list] (func\)[start;list] };
+
+// @kind function
+// @overview Over ternary.
+//
+// - See [`Over`](https://code.kx.com/q/ref/accumulators/#ternary-values).
+// @param func {function} A binary function.
+// @param start {*} A value.
+// @param list1 {*[]} A list.
+// @param list2 {*[]} A list.
+// @return {*[]} A list of results by successively apply the function to the elements in the list. The first iteration
+// uses `start`, the first element of `list1`, and the first element of `list2`.
+.util.overTernary:{[func;start;list1;list2] (func\)[start;list1;list2] };

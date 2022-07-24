@@ -443,6 +443,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#utiloverternary" class="md-nav__link">
+    .util.overTernary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#utiloverunary" class="md-nav__link">
     .util.overUnary
   </a>
@@ -505,6 +512,13 @@
         <li class="md-nav__item">
   <a href="#utiloverbinary" class="md-nav__link">
     .util.overBinary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utiloverternary" class="md-nav__link">
+    .util.overTernary
   </a>
   
 </li>
@@ -662,6 +676,58 @@
 <tr>
 <td>*[]</td>
 <td>A list of results by successively apply the function to the elements in the list. The first iteration  uses <code>start</code> and the first element of the list.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="utiloverternary">.util.overTernary<a class="headerlink" href="#utiloverternary" title="Permanent link">&para;</a></h2>
+<p>Over ternary.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/accumulators/#ternary-values"><code>Over</code></a>.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>func</td>
+<td>fn</td>
+<td>A binary function.</td>
+</tr>
+<tr>
+<td>start</td>
+<td>*</td>
+<td>A value.</td>
+</tr>
+<tr>
+<td>list1</td>
+<td>*[]</td>
+<td>A list.</td>
+</tr>
+<tr>
+<td>list2</td>
+<td>*[]</td>
+<td>A list.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*[]</td>
+<td>A list of results by successively apply the function to the elements in the list. The first iteration  uses <code>start</code>, the first element of <code>list1</code>, and the first element of <code>list2</code>.</td>
 </tr>
 </tbody>
 </table>
