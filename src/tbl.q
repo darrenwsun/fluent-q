@@ -58,7 +58,9 @@
 // @param table {table | symbol} A simple table, or name of a simple table.
 // @param keyCols {int | long | symbol | symbol[]} An integer, or some column names of the table.
 // @return {keyed table | symbol} A keyed table, or the same name, whose keys are specified by either the number
+//
 // - the number of first `keyCols` columns, if `keyCols` is an int/long integer; or
+//
 // - the specified column names `keyCols`, if `keyCols` is a symbol or vector of symbols.
 .tbl.setKey:{[table;keyCols]
   $[type[keyCols] within -7 -6; keyCols!table; keyCols xkey table]
