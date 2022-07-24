@@ -526,6 +526,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tblunsetkey" class="md-nav__link">
+    .tbl.unsetKey
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -674,6 +681,13 @@
         <li class="md-nav__item">
   <a href="#tblungroup" class="md-nav__link">
     .tbl.ungroup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tblunsetkey" class="md-nav__link">
+    .tbl.unsetKey
   </a>
   
 </li>
@@ -1006,9 +1020,10 @@
 </tbody>
 </table>
 <h2 id="tblsetkey">.tbl.setKey<a class="headerlink" href="#tblsetkey" title="Permanent link">&para;</a></h2>
-<p>Set key column(s).</p>
+<p>Set key columns.</p>
 <ul>
 <li>See <a href="https://code.kx.com/q/ref/keys/#xkey"><code>xkey</code></a>.</li>
+<li>See <a href="https://code.kx.com/q/ref/enkey/"><code>Enkey</code></a>.</li>
 </ul>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1022,13 +1037,13 @@
 <tbody>
 <tr>
 <td>table</td>
-<td>table | keyed table | symbol</td>
-<td>A keyed/unkeyed table, or a table name.</td>
+<td>table | symbol</td>
+<td>A simple table, or name of a simple table.</td>
 </tr>
 <tr>
 <td>keyCols</td>
-<td>symbol | symbol[]</td>
-<td>Some column names of the table.</td>
+<td>int | long | symbol | symbol[]</td>
+<td>An integer, or some column names of the table.</td>
 </tr>
 </tbody>
 </table>
@@ -1043,7 +1058,7 @@
 <tbody>
 <tr>
 <td>keyed table | symbol</td>
-<td>A keyed table, or the same name, whose keys are specified by <code>keyCols</code>.</td>
+<td>A keyed table, or the same name, whose keys are specified by either the number  - the number of first <code>keyCols</code> columns, if <code>keyCols</code> is an int/long integer; or  - the specified column names <code>keyCols</code>, if <code>keyCols</code> is a symbol or vector of symbols.</td>
 </tr>
 </tbody>
 </table>
@@ -1276,6 +1291,43 @@
 <tr>
 <td>table</td>
 <td>A normalized table with one row for each item of the lists.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tblunsetkey">.tbl.unsetKey<a class="headerlink" href="#tblunsetkey" title="Permanent link">&para;</a></h2>
+<p>Remove the keys from a table.</p>
+<ul>
+<li>See <a href="https://code.kx.com/q/ref/enkey/#unkey"><code>Unkey</code></a>.</li>
+</ul>
+<p><strong>Parameter:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table</td>
+<td>keyed table | symbol</td>
+<td>A keyed table, or a name of a keyed table.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>table | symbol</td>
+<td>A simple table, or the same name, whose key columns become normal columns.</td>
 </tr>
 </tbody>
 </table>

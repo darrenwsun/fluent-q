@@ -51,13 +51,26 @@
 .tbl.getKey:{[table] keys table };
 
 // @kind function
-// @overview Set key column(s).
+// @overview Set key columns.
 //
 // - See [`xkey`](https://code.kx.com/q/ref/keys/#xkey).
-// @param table {table | keyed table | symbol} A keyed/unkeyed table, or a table name.
-// @param keyCols {symbol | symbol[]} Some column names of the table.
-// @return {keyed table | symbol} A keyed table, or the same name, whose keys are specified by `keyCols`.
-.tbl.setKey:{[table;keyCols] keyCols xkey table };
+// - See [`Enkey`](https://code.kx.com/q/ref/enkey/).
+// @param table {table | symbol} A simple table, or name of a simple table.
+// @param keyCols {int | long | symbol | symbol[]} An integer, or some column names of the table.
+// @return {keyed table | symbol} A keyed table, or the same name, whose keys are specified by either the number
+// - the number of first `keyCols` columns, if `keyCols` is an int/long integer; or
+// - the specified column names `keyCols`, if `keyCols` is a symbol or vector of symbols.
+.tbl.setKey:{[table;keyCols]
+  $[type[keyCols] within -7 -6; keyCols!table; keyCols xkey table]
+ };
+
+// @kind function
+// @overview Remove the keys from a table.
+//
+// - See [`Unkey`](https://code.kx.com/q/ref/enkey/#unkey).
+// @param table {keyed table | symbol} A keyed table, or a name of a keyed table.
+// @return {table | symbol} A simple table, or the same name, whose key columns become normal columns.
+.tbl.unsetKey:{[table] 0!table };
 
 // @kind function
 // @overview Foreign-key columns of a table.
